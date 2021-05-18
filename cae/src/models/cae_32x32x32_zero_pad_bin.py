@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from torchsummary import summary
 
 
 class CAE(nn.Module):
@@ -164,7 +165,7 @@ class CAE(nn.Module):
             nn.Tanh(),
         )
 
-    def forward(self, x):
+    def compress(self, x):
         ec1 = self.e_conv_1(x)
         ec2 = self.e_conv_2(ec1)
         eblock1 = self.e_block_1(ec2) + ec2
@@ -179,9 +180,14 @@ class CAE(nn.Module):
             eps = torch.zeros(ec3.shape).cuda()
             eps[rand <= prob] = (1 - ec3)[rand <= prob]
             eps[rand > prob] = (-ec3 - 1)[rand > prob]
-
+        # summary(ec3, x.size())
         # encoded tensor
         self.encoded = 0.5 * (ec3 + eps + 1)  # (-1|1) -> (0|1)
+        return self.encoded
+
+    def forward(self, x):
+        self.compress(x)
+        # print('shape compression : ', self.encoded.size())
 
         return self.decode(self.encoded)
 

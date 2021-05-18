@@ -22,7 +22,8 @@ logger = Logger(__name__, colorize=True)
 
 
 def train(cfg: Namespace) -> None:
-    assert cfg.device == "cpu" or (cfg.device == "cuda" and T.cuda.is_available())
+    assert cfg.device == "cpu" or (
+        cfg.device == "cuda" and T.cuda.is_available())
 
     root_dir = Path(__file__).resolve().parents[1]
 
@@ -54,7 +55,8 @@ def train(cfg: Namespace) -> None:
     )
     logger.info(f"loaded dataset from {cfg.dataset_path}")
 
-    optimizer = optim.Adam(model.parameters(), lr=cfg.learning_rate, weight_decay=1e-5)
+    optimizer = optim.Adam(
+        model.parameters(), lr=cfg.learning_rate, weight_decay=1e-5)
     loss_criterion = nn.MSELoss()
 
     avg_loss, epoch_avg = 0.0, 0.0
@@ -63,7 +65,9 @@ def train(cfg: Namespace) -> None:
     # EPOCHS
     for epoch_idx in range(cfg.start_epoch, cfg.num_epochs + 1):
         # BATCHES
+        print(f'epoch_idex : {epoch_idx}/{cfg.num_epochs + 1}')
         for batch_idx, data in enumerate(dataloader, start=1):
+            print(batch_idx, end='->')
             img, patches, _ = data
 
             if cfg.device == "cuda":
@@ -87,7 +91,8 @@ def train(cfg: Namespace) -> None:
             epoch_avg += avg_loss_per_image
 
             if batch_idx % cfg.batch_every == 0:
-                tb_writer.add_scalar("train/avg_loss", avg_loss / cfg.batch_every, ts)
+                tb_writer.add_scalar(
+                    "train/avg_loss", avg_loss / cfg.batch_every, ts)
 
                 for name, param in model.named_parameters():
                     tb_writer.add_histogram(name, param, ts)
@@ -139,7 +144,8 @@ def train(cfg: Namespace) -> None:
             logger.info("Epoch avg = %.8f" % epoch_avg)
             epoch_avg = 0.0
 
-            T.save(model.state_dict(), exp_dir / f"checkpoint/model_{epoch_idx}.pth")
+            T.save(model.state_dict(), exp_dir /
+                   f"checkpoint/model_{epoch_idx}.pth")
         # -- end epoch every
     # -- end epoch
 
