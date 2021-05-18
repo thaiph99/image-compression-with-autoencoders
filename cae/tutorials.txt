@@ -1,0 +1,5 @@
+--- train 
+python3 src/train.py --config configs/train.yaml
+
+-- test
+python3 src/test.py --config configs/test.yaml
