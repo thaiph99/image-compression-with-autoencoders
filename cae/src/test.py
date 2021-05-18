@@ -25,8 +25,10 @@ def test(cfg: Namespace) -> None:
     assert cfg.checkpoint not in [None, ""]
     print('device : ', cfg.device)
     print('available : ', T.cuda.is_available())
-    print('test : ', cfg.device == "cpu" or (cfg.device == "cuda" and T.cuda.is_available()))
-    assert cfg.device == "cpu" or (cfg.device == "cuda" and T.cuda.is_available())
+    print('test : ', cfg.device == "cpu" or (
+        cfg.device == "cuda" and T.cuda.is_available()))
+    assert cfg.device == "cpu" or (
+        cfg.device == "cuda" and T.cuda.is_available())
 
     exp_dir = ROOT_EXP_DIR / cfg.exp_name
     os.makedirs(exp_dir / "out", exist_ok=True)
@@ -67,7 +69,8 @@ def test(cfg: Namespace) -> None:
                 loss = loss_criterion(y, x)
                 avg_loss += (1 / 60) * loss.item()
 
-        logger.debug("[%5d/%5d] avg_loss: %f", batch_idx, len(dataloader), avg_loss)
+        logger.debug("[%5d/%5d] avg_loss: %f", batch_idx,
+                     len(dataloader), avg_loss)
 
         # save output
         out = np.transpose(out, (0, 3, 1, 4, 2))

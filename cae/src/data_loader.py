@@ -18,7 +18,8 @@ class ImageFolder720p(Dataset):
     def __getitem__(self, index: int) -> Tuple[T.Tensor, np.ndarray, str]:
         path = str(self.files[index % len(self.files)])
         img = np.array(Image.open(path))
-
+        img = np.resize(img, new_shape=(720, 1280, 3))
+        print('image size : ', img.shape)
         pad = ((24, 24), (0, 0), (0, 0))
 
         # img = np.pad(img, pad, 'constant', constant_values=0) / 255
