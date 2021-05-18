@@ -9,6 +9,6 @@ batch_every: 1
 save_every: 10
 epoch_every: 1
 shuffle: true
-dataset_path: /home/it/Data/thaiphData/image-compression-with-autoencoders/cae/datasets/training/yt_small_720p
+dataset_path: /datasets/training/yt_small_720p
 num_workers: 2
 device: cuda

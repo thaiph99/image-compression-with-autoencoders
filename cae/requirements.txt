@@ -5,3 +5,4 @@ PyYAML
 scikit_image
 torch
 torchvision
+torchsummary
