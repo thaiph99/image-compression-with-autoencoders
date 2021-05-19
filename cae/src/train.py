@@ -151,7 +151,6 @@ def train(cfg: Namespace) -> None:
 
     # save final model
     T.save(model.state_dict(), exp_dir / "model_final.pth")
-
     # cleaning
     tb_writer.close()
 

@@ -7,6 +7,7 @@ import numpy as np
 import torch as T
 import torch.nn as nn
 from torch.utils.data import DataLoader
+from torchsummary import summary
 
 from data_loader import ImageFolder720p
 from utils import save_imgs
@@ -67,7 +68,7 @@ def test(cfg: Namespace) -> None:
                 compressed = model.compress(x)
                 print('shape compressed : ', compressed.size())
 
-                y = model.decode(compressed)    
+                y = model.decode(compressed)
 
                 out[i, j] = y.data
 
@@ -89,6 +90,8 @@ def test(cfg: Namespace) -> None:
             to_size=(3, 768, 2 * 1280),
             name=exp_dir / f"out/test_{batch_idx}.png",
         )
+    print(x.size()[1:])
+    summary(model, x.size()[1:])
 
 
 if __name__ == "__main__":
