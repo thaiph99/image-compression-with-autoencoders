@@ -1,0 +1,68 @@
+\documentclass[envcountsame,envcountchap, openany, 14pt]{mysvmono2}
+% \documentclass[14pt]{report}
+\usepackage{blindtext}
+\usepackage[paperheight=29.7cm,paperwidth=21.0cm, top=2.5cm, bottom=2cm, left=3.5cm, right=2cm]{geometry}
+\usepackage[ddmmyyyy]{datetime}
+\include{packages_book}
+% add (.) into section number. E.g: 1.1., 1.2., 
+\usepackage{titlesec}
+\titlelabel{\thetitle.~}
+% continous footnote numbering.
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+
+\usepackage{enumitem}
+% \usepackage{enumerate}
+\def\myenum{label=\alph*)}
+\setenumerate[0]{label=\alph*.}      
+
+%%%%%% format subsubsection to bold italic
+\usepackage{titlesec}
+\titleformat*{\subsubsection}{\bfseries\itshape}
+
+
+\usepackage{natbib}
+% \setlength{\bibsep}{5.0pt}
+\usepackage{indentfirst}
+\usepackage{makecell}
+% \usepackage{pbox}
+\begin{document}
+\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% %% cover
+% \incgraph[documentpaper, overlay={\node[red] at (page.center) {};}][width=\paperwidth]{Chapters/cover/cover1.png}
+
+\section*{\centering Lời cảm ơn}
+
+Lời đầu tiên, em xin bày tỏ sự cảm ơn chân thành đối với Cô giáo, TS.
+Nguyễn Thị Mỹ Bình – giáo viên hướng dẫn trực tiếp em.
+
+Em cũng xin gửi lời cảm ơn tới các thầy cô trong khoa Công nghệ thông tin,
+trường Đại học Công Nghiệp Hà Nội đã hướng dẫn, chỉ bảo và tạo điều kiện cho em
+học tập cũng như nghiên cứu trong thời gian qua.
+
+Cảm ơn Câu lạc bộ HIT, Đội Olympic Tin học khoa Công nghệ thông tin đã đồng hành
+cùng em trong suốt quãng thời gian học tập, làm việc tại trường.
+
+Mặc dù đã cố gắng hoàn thành báo cáo đồ án tốt nghiệp này nhưng chắc chắn
+sẽ không tránh khỏi những sai sót, em kính mong nhận được sự thông cảm và chỉ
+bảo của các thầy cô và các bạn.
+
+\tableofcontents
+
+\input{Chapters/dimred2}
+\input{Chapters/content/intro}
+\include{Chapters/content/chap1}
+\include{Chapters/content/chap2}
+\include{Chapters/content/chap3}
+\include{Chapters/content/chap4}
+% \include{Chapters/content/27_pca2}
+
+\backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\medskip
+\bibliographystyle{abbrv}
+\bibliography{refs}
+
+% \printindex
+\end{document}
