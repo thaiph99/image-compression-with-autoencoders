@@ -1,22 +1,20 @@
-import os
-import yaml
 import argparse
+import os
 from pathlib import Path
 
 import numpy as np
 import torch as T
 import torch.nn as nn
+import yaml
+from bagoftools.logger import Logger
+from bagoftools.namespace import Namespace
 from torch.utils.data import DataLoader
 from torchsummary import summary
 
 from data_loader import ImageFolder720p
-from utils import save_imgs
-
-from bagoftools.namespace import Namespace
-from bagoftools.logger import Logger
-
 # from models.cae_32x32x32_zero_pad_bin import CAE
 from models.cae_16x16x16_zero_pad_bin import CAE
+from utils import save_imgs
 
 ROOT_EXP_DIR = Path(__file__).resolve().parents[1] / "experiments"
 

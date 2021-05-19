@@ -1,23 +1,21 @@
-import os
-import yaml
 import argparse
+import os
 from pathlib import Path
 
 import numpy as np
 import torch as T
 import torch.nn as nn
 import torch.optim as optim
+import yaml
+from bagoftools.logger import Logger
+from bagoftools.namespace import Namespace
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
 from data_loader import ImageFolder720p
-from utils import save_imgs
-
-from bagoftools.namespace import Namespace
-from bagoftools.logger import Logger
-
 # from models.cae_32x32x32_zero_pad_bin import CAE
 from models.cae_16x16x16_zero_pad_bin import CAE
+from utils import save_imgs
 
 logger = Logger(__name__, colorize=True)
 
@@ -152,7 +150,8 @@ def train(cfg: Namespace) -> None:
 
     # save final model
     T.save(model.state_dict(), exp_dir / "model_final.pth")
-    T.save(model.state_dict(), root_dir/f"weights/model_final0_00{int(epoch_avg*1000)}.pth")
+    T.save(model.state_dict(), root_dir /
+           f"weights/model_final0_00{int(epoch_avg*1000)}.pth")
     # cleaning
     tb_writer.close()
 

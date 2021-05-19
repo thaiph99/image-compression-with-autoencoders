@@ -1,4 +1,5 @@
 import struct
+
 import numpy as np
 from torchvision.utils import save_image
 

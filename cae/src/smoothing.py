@@ -35,16 +35,20 @@ def smooth(in_img, ws):
         p2 = patches[i + 1, :, h, :, :]
 
         x = lin_interp(ws, p1, p2)
-        patches[i, :, 128 - h :, :, :] = np.transpose(x[:h, :, :, :], (1, 0, 2, 3))
-        patches[i + 1, :, :h, :, :] = np.transpose(x[h:, :, :, :], (1, 0, 2, 3))
+        patches[i, :, 128 - h:, :,
+                :] = np.transpose(x[:h, :, :, :], (1, 0, 2, 3))
+        patches[i + 1, :, :h, :,
+                :] = np.transpose(x[h:, :, :, :], (1, 0, 2, 3))
 
     for j in range(9):
         p3 = patches[:, j, :, 128 - h, :]
         p4 = patches[:, j + 1, :, h, :]
 
         x = lin_interp(ws, p3, p4)
-        patches[:, j, :, 128 - h :, :] = np.transpose(x[:h, :, :, :], (1, 2, 0, 3))
-        patches[:, j + 1, :, :h, :] = np.transpose(x[h:, :, :, :], (1, 2, 0, 3))
+        patches[:, j, :, 128 - h:,
+                :] = np.transpose(x[:h, :, :, :], (1, 2, 0, 3))
+        patches[:, j + 1, :, :h,
+                :] = np.transpose(x[h:, :, :, :], (1, 2, 0, 3))
 
     out = np.transpose(patches, (0, 2, 1, 3, 4))
     out = np.reshape(out, (768, 1280, 3))
@@ -56,11 +60,12 @@ def smooth(in_img, ws):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--in_img", type=str, required=True)
-    parser.add_argument("--window_size", type=int, required=True)
+    parser.add_argument("--in_img", type=str, required=True, help='image path')
+    parser.add_argument("--window_size", type=int,
+                        default=127 * 2, required=False, help='size of window')
     args = parser.parse_args()
 
     # make sure an even size is used
     args.window_size += args.window_size % 2
-
+    print(args.window_size)
     smooth(args.in_img, args.window_size)

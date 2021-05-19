@@ -1,0 +1,11 @@
+torch>=1.8.1
+numpy>=1.19.5
+PyYAML>=5.3.1
+bagoftools>=1.2.3
+torchsummary>=1.5.1
+torchvision>=0.9.1
+Pillow>=7.0.0
+scikit-image>=0.18.1
+opencv-python>=4.5.1.48
+matplotlib>=3.4.1
+Keras>=2.4.3

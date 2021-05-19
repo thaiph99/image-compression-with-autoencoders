@@ -1,7 +1,5 @@
 import torch
-from torch._C import device
 import torch.nn as nn
-from torchsummary import summary
 
 
 class CAE(nn.Module):
