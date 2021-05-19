@@ -161,7 +161,7 @@ class CAE(nn.Module):
             nn.Tanh(),
         )
 
-    def forward(self, x):
+    def compress(self, x):
         ec1 = self.e_conv_1(x)
         ec2 = self.e_conv_2(ec1)
         eblock1 = self.e_block_1(ec2) + ec2
@@ -179,8 +179,15 @@ class CAE(nn.Module):
 
         # encoded tensor
         self.encoded = 0.5 * (ec3 + eps + 1)  # (-1|1) -> (0|1)
+        return self.encoded
 
-        return self.decode(self.encoded)
+    def forward(self, x):
+        print('shape precompress :', x.size())
+        encoded = self.compress(x)
+        print('shape compression : ', encoded.size())
+        decoded = self.decode(encoded)
+        print('shape decompression : ', decoded.size())
+        return decoded
 
     def decode(self, encoded):
         y = encoded * 2.0 - 1  # (0|1) -> (-1|1)

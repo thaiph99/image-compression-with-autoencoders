@@ -15,7 +15,8 @@ from utils import save_imgs
 from bagoftools.namespace import Namespace
 from bagoftools.logger import Logger
 
-from models.cae_32x32x32_zero_pad_bin import CAE
+# from models.cae_32x32x32_zero_pad_bin import CAE
+from models.cae_16x16x16_zero_pad_bin import CAE
 
 ROOT_EXP_DIR = Path(__file__).resolve().parents[1] / "experiments"
 
@@ -64,9 +65,8 @@ def test(cfg: Namespace) -> None:
         for i in range(6):
             for j in range(10):
                 x = patches[:, :, i, j, :, :].cuda()
-                print(x.size())
+                # print(x.size())
                 compressed = model.compress(x)
-                print('shape compressed : ', compressed.size())
 
                 y = model.decode(compressed)
 
@@ -80,7 +80,6 @@ def test(cfg: Namespace) -> None:
 
         # save output
         out = np.transpose(out, (0, 3, 1, 4, 2))
-        print('preshape :', out.shape)
         out = np.reshape(out, (768, 1280, 3))
         out = np.transpose(out, (2, 0, 1))
 
@@ -90,7 +89,7 @@ def test(cfg: Namespace) -> None:
             to_size=(3, 768, 2 * 1280),
             name=exp_dir / f"out/test_{batch_idx}.png",
         )
-    print(x.size()[1:])
+    # print(x.size()[1:])
     summary(model, x.size()[1:])
 
 

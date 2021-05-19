@@ -1,4 +1,5 @@
 import torch
+from torch._C import device
 import torch.nn as nn
 from torchsummary import summary
 
@@ -186,10 +187,12 @@ class CAE(nn.Module):
         return self.encoded
 
     def forward(self, x):
-        self.compress(x)
-        # print('shape compression : ', self.encoded.size())
-
-        return self.decode(self.encoded)
+        print('shape precompress :', x.size())
+        encoded = self.compress(x)
+        print('shape compression : ', encoded.size())
+        decoded = self.decode(encoded)
+        print('shape decompression : ', decoded.size())
+        return decoded
 
     def decode(self, encoded):
         y = encoded * 2.0 - 1  # (0|1) -> (-1|1)
