@@ -19,7 +19,7 @@ ROOT_EXP_DIR = Path(__file__).resolve().parents[1] / "experiments"
 logger = Logger(__name__, colorize=True)
 
 
-def test(cfg: Namespace) -> None:
+def compress(cfg: Namespace) -> None:
     assert cfg.checkpoint not in [None, ""]
     print('device : ', cfg.device)
     print('available : ', T.cuda.is_available())
@@ -55,38 +55,42 @@ def test(cfg: Namespace) -> None:
         if batch_idx % cfg.batch_every == 0:
             pass
 
-        out = T.zeros(6, 10, 3, 128, 128)
+        out = T.zeros(6, 10, 32, 32, 32)
         avg_loss = 0
 
         for i in range(6):
             for j in range(10):
                 x = patches[:, :, i, j, :, :].cuda()
-                print(x.size())
                 compressed = model.compress(x)
-                print('shape compressed : ', compressed.size())
+                # y = model.decode(compressed)
 
-                y = model.decode(compressed)
+                out[i, j] = compressed.int().data
+                print(out[i, j].data)
 
-                out[i, j] = y.data
+                # loss = loss_criterion(y, x)
+                # avg_loss += (1 / 60) * loss.item()
 
-                loss = loss_criterion(y, x)
-                avg_loss += (1 / 60) * loss.item()
-
-        logger.debug("[%5d/%5d] avg_loss: %f", batch_idx,
-                     len(dataloader), avg_loss)
+        # logger.debug("[%5d/%5d] avg_loss: %f", batch_idx,
+        #              len(dataloader), avg_loss)
 
         # save output
+        print(img.size())
+        print(patches.size())
+        print('size pre compress :', )
         out = np.transpose(out, (0, 3, 1, 4, 2))
-        print('preshape :', out.shape)
-        out = np.reshape(out, (768, 1280, 3))
-        out = np.transpose(out, (2, 0, 1))
+        print('type : ', type(out))
+        print('size : ', out.size())
+        T.save(out, f'datasets/compressing/compress{batch_idx}.jpg')
+        # print('preshape :', out.shape)
+        # out = np.reshape(out, (768, 1280, 3))
+        # out = np.transpose(out, (2, 0, 1))
 
-        y = T.cat((img[0], out), dim=2)
-        save_imgs(
-            imgs=y.unsqueeze(0),
-            to_size=(3, 768, 2 * 1280),
-            name=exp_dir / f"out/test_{batch_idx}.png",
-        )
+        # y = T.cat((img[0], out), dim=2)
+        # save_imgs(
+        #     imgs=y.unsqueeze(0),
+        #     to_size=(3, 768, 2 * 1280),
+        #     name=exp_dir / f"out/test_{batch_idx}.png",
+        # )
 
 
 if __name__ == "__main__":
@@ -97,4 +101,5 @@ if __name__ == "__main__":
     with open(args.config, "rt") as fp:
         cfg = Namespace(**yaml.safe_load(fp))
 
-    test(cfg)
+    compress(cfg)
+    print('cfg :', cfg)

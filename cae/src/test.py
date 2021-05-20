@@ -12,8 +12,8 @@ from torch.utils.data import DataLoader
 from torchsummary import summary
 
 from data_loader import ImageFolder720p
-# from models.cae_32x32x32_zero_pad_bin import CAE
-from models.cae_16x16x16_zero_pad_bin import CAE
+from models.cae_32x32x32_zero_pad_bin import CAE
+# from models.cae_16x16x16_zero_pad_bin import CAE
 from utils import save_imgs
 
 ROOT_EXP_DIR = Path(__file__).resolve().parents[1] / "experiments"
@@ -63,7 +63,6 @@ def test(cfg: Namespace) -> None:
         for i in range(6):
             for j in range(10):
                 x = patches[:, :, i, j, :, :].cuda()
-                # print(x.size())
                 compressed = model.compress(x)
 
                 y = model.decode(compressed)
@@ -81,13 +80,28 @@ def test(cfg: Namespace) -> None:
         out = np.reshape(out, (768, 1280, 3))
         out = np.transpose(out, (2, 0, 1))
 
+        # save img decode
+        save_imgs(
+            imgs=out.unsqueeze(0),
+            to_size=(3, 768, 1280),
+            name=exp_dir / f"out/real_test_{batch_idx}.jpeg",
+        )
+
+        T.save(img, f'datasets/compressing/img_origin{batch_idx}')
+        
+        # save img origin
+        save_imgs(
+            imgs=img.unsqueeze(0),
+            to_size=(3, 768, 1280),
+            name=exp_dir / f"out/origin_test_{batch_idx}.jpeg",
+        )
         y = T.cat((img[0], out), dim=2)
+        print('y size :', y.unsqueeze(0).size())
         save_imgs(
             imgs=y.unsqueeze(0),
             to_size=(3, 768, 2 * 1280),
             name=exp_dir / f"out/test_{batch_idx}.png",
         )
-    # print(x.size()[1:])
     summary(model, x.size()[1:])
 
 
@@ -95,7 +109,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=str, required=True)
     args = parser.parse_args()
-
     with open(args.config, "rt") as fp:
         cfg = Namespace(**yaml.safe_load(fp))
 
