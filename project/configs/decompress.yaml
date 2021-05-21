@@ -1,0 +1,7 @@
+checkpoint: weights/model_final0_0137.pth
+exp_name: testing
+batch_every: 100
+shuffle: false
+dataset_path: datasets/testing
+num_workers: 5
+device: cuda
