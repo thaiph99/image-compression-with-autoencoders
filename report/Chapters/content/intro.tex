@@ -13,32 +13,11 @@
 
 \section{Lý do chọn đề tài}
 
-Với sự phát triển không ngừng của khoa học và công nghệ, đặc biệt là với những
-chiếc điện thoại thông minh (smartphone) ngày càng hiện đại và được sử dụng
-phổ biến trong đời sống con người đã làm cho lượng thông tin thu được bằng hình ảnh
-ngày càng tăng. Theo đó, lĩnh vực xử lý ảnh cũng được chú trọng phát triển, ứng dụng
-rộng rãi trong đời sống xã hội hiện đại. Không chỉ dừng lại ở việc chỉnh sửa, tăng
-chất lượng hình ảnh mà với công nghệ xử lý ảnh hiện nay chúng ta có thể giải quyết
-các bài toán nhận dạng chữ viết, nhận dạng dấu vân tay, nhận dạng khuôn mặt...
-Một trong những bài toán được nhiều người quan tâm nhất của lĩnh vực xử lý ảnh hiện nay
-đó là nhận dạng khuôn mặt (Face Recognition). Như chúng ta đã biết, khuôn mặt đóng
-vai trò quan trọng trong quá trình giao tiếp giữa người với người, nó mang một lượng
-thông tin giàu có, chẳng hạn như từ khuôn mặt chúng ta có thể xác định giới tính, tuổi tác,
-chủng tộc, trạng thái cảm xúc, đặc biệt là xác định mối quan hệ với đối tượng (có quen biết
-hay không).
-
-Có rất nhiều phương pháp nhận dạng khuôn mặt để nâng cao hiệu suất tuy nhiên dù ít hay
-nhiều những phương pháp này đang vấp phải những thử thách về độ sáng, hướng nghiêng,
-kích thước ảnh, hay ảnh hưởng của tham số môi trường. Bài toán
-Nhận diện khuôn mặt (Face Recognition) bao gồm nhiều bài toán khác nhau như:
-phát hiện mặt người (face detection), đánh dấu (facial landmarking), trích chọn(rút) đặc trưng
-(feature extration), gán nhãn, phân lớp (classification).
-Trong thực tế, nhận dạng khuôn mặt người (Face Recognition) là một hướng nghiên cứu được
-nhiều nhà khoa học quan tâm, nghiên cứu để ứng dụng trong thực tiễn.
-Vì thế có những cải tiến nghiên cứu về bài toán phát hiện khuôn mặt người trong
-những môi trường phức tạp hơn, có nhiều khuôn mặt người trong ảnh hơn,
-và có nhiều tư thế thay đổi trong ảnh... Trong bài này tôi sẽ tìm hiểu về trích rút đặc
-trưng sử dụng học sâu (Deep learning) và áp dụng vào bài toán nhận diện khuôn mặt .
+Với sự phát triển không ngừng của khoa học và công nghệ, đặc biệt là các định dạng phương tiện mới
+công nghệ phần cứng thay đổi, cũng như các yêu cầu và loại nội dung đa dạng tạo ra nhu cầu
+về các thuật toán nén có giá trị cao hơn các phương pháp nén hiện tại (codec). Chúng em lựa chọn
+đề tài này nhằm tìm kiếm, xây dựng, triển khai các phương pháp nén mới tận dụng sự mạnh mẽ
+của phần cứng ngày nay.
 
 % Chúng ta sẽ xem xét các phương pháp giảm chiều dữ liệu phổ biến
 % nhất: \textit{phân tích thành phần chính} ({principle component analysis}) cho bài toán giảm chiều dữ liệu
@@ -50,42 +29,27 @@ trưng sử dụng học sâu (Deep learning) và áp dụng vào bài toán nh�
 \section{Mục đích của đề tài}
 
 \begin{itemize}
-      \item Xây dựng, tìm kiếm các mô hình học sâu để trích xuất thông tin khuôn mặt
-            người dùng 1 cách chính xác, hiệu quả.
-      \item Tìm hiểu sử dụng thành thạo các phương pháp làm giàu dữ liệu,
-            ứng dụng cho bài toán nhận diện với dữ liệu là các ảnh khuôn mặt
-      \item Xây dựng các phương pháp thu thập, làm giàu dữ liệu khuôn mặt
-      \item Tìm hiểu ứng dụng các thuật toán phân loại trong học máy để
-            áp dụng vào bài toàn nhận diện khuôn mặt
+      \item Phân tích các kĩ thuật nén cũ (codec)
+      \item Xây dựng, tìm kiếm các kĩ thuật, phương pháp mới sử dụng trong nén dữ liệu
+            đa phương tiện hiệu quả
+      \item Tận dụng sự mạnh mẽ của phần cứng.
 \end{itemize}
 
 \section{Đối tượng và phạm vi nghiên cứu của đề tài}
 \subsection{Đối tượng}
 \begin{itemize}
-      \item Các mô hình học sâu nổi tiếng về nhận dạng khuôn mặt được các nhà khoa học huấn luyện trước với nhưng bộ dữ liệu
-            cực lớn và chuẩn xác.
-      \item Các mô hình, phương pháp phát hiện khuôn mặt trong ảnh với độ chính xác cao
-      \item Các phương pháp làm giàu dữ liệu, đặc biệt là với dữ liệu khuôn mặt.
-      \item Các phương pháp phân loại dữ liệu trong học máy và học sâu
-      \item Các phương pháp đánh giá mất mát thương dùng để huấn luyện các mô hình học máy, học sâu
+      \item Các kĩ thuật nén thường được sử dụng (DCT, Huffman, kmean, ... )
+      \item Các phương pháp nén được phát triển và thể hiện tính hiệu quả trong thời gian gần đây
+      \item Các phương pháp phương pháp đánh giá hiệu năng nén
 \end{itemize}
 \newpage
 \subsection{Phạm vi nghiên cứu}
 \begin{itemize}
       \item Tập trung sử dụng bộ dữ liệu tự tạo của các sinh viên trong trường đại học Công nghiệp Hà Nội
-      \item Huấn luyện mô hình theo phương pháp đánh giá bộ ba (triplet loss)
-      \item Sử dụng các đánh giá cơ bản để đánh giá tính chính xác của mô hình
+      \item Nghiên cứu tập trung chủ yếu các kĩ thuật nén có mất mát dữ liệu.
+      \item Tìm kiếm các phương pháp, kĩ thuật nén liên quan đến học máy, học sâu để
+            tận dụng khả năng của phần cứng.
 \end{itemize}
-\section{Kết cấu của đồ án}
-Gồm 4 chương:
-
-Chương 1: Nghiên cứu tổng quan
-
-Chương 2: Cơ sở lý thuyết
-
-Chương 3: Thiết kế và xây dựng hệ thống
-
-Chương 4: Kết luận và hướng phát triển
 
 
 

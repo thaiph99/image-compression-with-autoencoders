@@ -10,62 +10,58 @@
 % \index{PCA}
 \section{Các phương pháp nghiên cứu}
 
+Hiện nay nén dữ liệu được chia thành 2 loại:
 \begin{itemize}
-    \item Hiện nay có 2 phương pháp nhận diện khuôn mặt được sử dụng rộng rãi nhất là:
-          \begin{itemize}
-              \item Nhận dạng dựa trên các đặc trưng của các phần tử trên khuôn mặt
-                    (Feature base face recognition)
-              \item Nhận dạng dựa trên xét tổng thể khuôn mặt (Appearance based face
-                    recognition)
-          \end{itemize}
-
-    \item Ngoài ra còn một số phương pháp về loại sử dụng mô hình về khuôn mặt:
-          \begin{itemize}
-              \item Nhận dạng 2D: Elastics Bunch Graph, Active Appearance Model.
-              \item Nhận dạng 3D: 3D Morphale Model
-          \end{itemize}
+      \item Nén không mất mát thông tin
+      \item Nén có mất mát thông tin
 \end{itemize}
 
 \section{Ưu nhược điểm của các phương pháp}
-\subsection{Nhận dạng dựa trên các đặc trưng của các phần tử trên khuôn mặt: }
+\subsection{Nén không mất mát thông tin: }
 
-Đây là phương pháp nhận dạng khuôn mặt dựa trên viện xác định các đặc trưng hình
-học của các chi tiết trên một khuôn mặt (vị trí, diện tích, hình dạng của mắt,
-mũi, miệng, ...) và mối quan hệ giữa chúng (khoảng cách của hai mắt, khoảng cách
-của hai lông mày, ...).
+Các thuật toán nén không mất dữ liệu thường dựa trên giả thuyết dư thừa trong dữ liệu
+và thể hiện dữ liệu chính xác hơn mà không mất các thông tin. Nén mà không làm mất dữ
+liệu là khả thi vì tất cả các dữ liệu thực tế đều có dư thừa. Ví dụ một hình ảnh có thể
+có các vùng màu sắc không thay đổi trong nhiều pixel. Thay vì ghi nhận từng pixel
+như đỏ, đỏ, đỏ... dữ liệu có thể được ghi là 279 điểm ảnh đỏ liên tiếp. Đây là một
+ví dụ về run-length encoding; ngoài ra còn có rất nhiều giải thuật khác.
 
-Ưu điểm của phương pháp này là nó gần với cách mà con người sử dụng để nhận biết
-khuôn mặt. Hơn nữa với việc xác định đặc tính cà mối quan hệ, phương pháp này có
-thể cho kết quả tốt trong các trường hợp ảnh có nhiều nhiễu như bị nghiêng, bị
-xoay hoặc ánh sáng thay đổi.
+Dựa theo mức áp dụng thuật toán nén người ta chia nén thành các dạng sau:
+\begin{itemize}
+      \item Nén tệp tin: Đây là dạng thức nén truyền thống và thuật toán nén được
+            áp dụng cho từng tệp tin riêng lẻ. Tuy vậy nếu 2 tệp tin giống nhau thì vẫn
+            được nén 2 lần và được ghi 2 lần. Chỉ các byte trùng lắp trong 1 file được loại
+            trừ để giảm kích thước. Tùy dữ liệu nhưng thông thường khả năng giảm sau khi
+            nén chỉ từ 2-3 lần.
+      \item Loại trừ trùng lắp file: Đây là dạng thức nén mà thuật toán nén được
+            áp dụng cho nhiều tập tin. Các file giống hệt nhau sẽ chỉ được lưu một lần.
+            Ví dụ một thư điện tử có tệp tin đính kèm được gửi cho 1000 người. Chỉ có một
+            bản đính kèm được lưu và vì vậy có thể giảm khá nhiều. Thông thường có thể giảm
+            từ 5-10 lần so với dữ liệu gốc. - Loại trừ trùng lắp ở mức sub-file: Đây là một
+            dạng thức kết hợp cả nén tệp tin và loại trừ trùng lắp
+\end{itemize}
 
-Nhược điểm của phương pháp này là cài đặt thuật toán phức tạp do việc xác định
-mối quan hệ giữa các đặc tính sẽ khó phân biệt. Mặt khác, với các ảnh kích thước
-bé thì các đặc tính sẽ khó phân biệt.
 
+\subsection{Nén có mất mát dữ liệu:}
 
-\subsection{Nhận dạng dựa trên xét tổng thể khuôn mặt:}
+Nén mất dữ liệu giảm số lượng bit bằng cách xác định các thông tin không cần thiết
+và loại bỏ chúng.
 
-Đây là phương pháp xem mỗi ảnh có kích thước RxC là một vector trong không gian
-RxC chiều. Ta sẽ xây dựng một không gian mới có chiều nhỏ hơn sao chi khi biểu diễn
-trong không gian có các đặc điểm chính của một khuôn mặt không bị mất đi.
-Trong không gian đó, các ảnh cùng một người sẽ được tập trung lại một nhóm
-gần nhau và cách xa các nhóm khác.
+Chuẩn nén tín hiệu số gồm có các chuẩn sau:
 
-Ưu điểm của phương pháp này là tìm được các đặc tính tiêu biểu của đối tượng cần nhận
-dạng mà không cần phải xác định các thành phần và mối quan hệ giữa các thành phần đó.
-Phương pháp sử dụng thuật toán có thể thực hiện tốt với các ảnh có độ phân giải cao,
-thu gọn ảnh thành một ảnh có kích thước nhỏ hơn. Có thể kết hợp các phương pháp khác
-như mạng Nơ-ron, Support Vector Machine.
+\begin{itemize}
+      \item Chuẩn MJPEG:
+            Đây là một trong những chuẩn cổ nhất mà hiện nay vẫn sử dụng. MJPEG (Morgan JPEG). Chuẩn này hiện chỉ sử dụng trong các thiết bị DVR rẻ tiền, chất lượng thấp. Không những chất lượng hình ảnh kém, tốn tài nguyên xử lý, cần nhiều dung lượng ổ chứa, và còn hay làm lỗi đường truyền.
+      \item Chuẩn MPEG2:
+            Chuẩn MPEG là một chuẩn thông dụng. Đã được sử dụng rộng rãi trong hơn một thập kỉ qua. Tuy nhiên, kích thước file lớn so với những chuẩn mới xuất hiện gần đây, và có thể gây khó khăn cho việc truyền dữ liệu.
+      \item Chuẩn MPEG-4:
+            Mpeg-4 là chuẩn cho các ứng dụng MultiMedia. Mpeg-4 trở thành một tiêu chuẩn cho nén ảnh kỹ thuật truyền hình số, các ứng dụng về đồ hoạ và Video tương tác hai chiều (Games, Videoconferencing) và các ứng dụng Multimedia tương tác hai chiều (World Wide Web hoặc các ứng dụng nhằm phân phát dữ liệu Video như truyền hình cáp, Internet Video...). Mpeg-4 đã trở thành một tiêu chuẩn công nghệ trong quá trình sản xuất, phân phối và truy cập vào các hệ thống Video. Nó đã góp phần giải quyết vấn đề về dung lượng cho các thiết bị lưu trữ, giải quyết vấn đề về băng thông của đường truyền tín hiệu Video hoặc kết hợp cả hai vấn đề trên.
+      
 
-Nhược điểm của phương pháp này phân loại theo chiều phân bố lớn nhất của vector.
-Tuy nhiên, chiều phân bố lớn nhất không phải lúc nào cũng mang lại hiệu qua
-tốt nhất cho bài toán nhận dạng và đặc biệt là phương pháp này rất nhạy với nhiễu.
+\end{itemize}
 
 \subsection{Kết luận}
 
-Vì kết quả nghiên cứu cuối cùng là ứng dụng với yêu cầu về độ chính xác cao, 
-khả năng thích ứng linh hoạt, hoạt động ổn định trong môi trường thực tế và 
-hoạt động với các camera với độ phân giải thấp. Tôi quyết định chọn phương pháp 
-nhận dạng dựạ trên xét tổng thể khuôn mặt (Appearance based face recognition).
+Vì sự đa dạng cũng như đã được phát triển nhiều của các phương pháp nén có mất mát nên chúng em
+đã lựa chọn loại nén này làm chủ đề nghiên cứu chính cho đề tài. 
 
