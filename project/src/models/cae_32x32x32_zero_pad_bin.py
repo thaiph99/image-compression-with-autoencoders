@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+from torchsummary import summary
 
 
 class CAE(nn.Module):
@@ -179,7 +180,7 @@ class CAE(nn.Module):
             eps = torch.zeros(ec3.shape).cuda()
             eps[rand <= prob] = (1 - ec3)[rand <= prob]
             eps[rand > prob] = (-ec3 - 1)[rand > prob]
-        # summary(ec3, x.size())
+        # summary(ec3, x.size()[1:])
         # encoded tensor
         self.encoded = 0.5 * (ec3 + eps + 1)  # (-1|1) -> (0|1)
         return self.encoded

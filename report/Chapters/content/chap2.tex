@@ -9,8 +9,78 @@
 % \index{principle component analysis -- phân tích thành phần chính}
 % \index{PCA}
 \section{Tổng quan về các kĩ thuật nén mất mát thông tin}
+Trong công nghệ thông tin, nén mất mát thông tin hoặc nén không thể đảo
+ngược là lớp phương pháp mã hóa dữ liệu sử dụng các phép gần đúng
+và loại bỏ một phần dữ liệu để thể hiện nội dung. Các kỹ thuật này
+được sử dụng để giảm kích thước dữ liệu để lưu trữ, xử lý và truyền
+tải nội dung. Công nghệ nén mất dữ liệu được thiết kế tốt thường
+làm giảm kích thước tệp đáng kể trước khi người dùng cuối nhận
+thấy sự xuống cấp.
+
+Nén mất dữ liệu được sử dụng phổ biến nhất để nén dữ liệu
+đa phương tiện (âm thanh, video và hình ảnh), đặc biệt trong
+các ứng dụng như phương tiện truyền trực tiếp hoặc điện thoại internet.
+
+Để mô tả định lượng mức độ gần đúng của dữ liệu tái tạo so
+với dữ liệu gốc, cần có một số hình thức đo độ biến dạng.
+Vậy nên, trước khi tìm hiểu về các thuật toán nén mất dữ
+liệu thường sử dụng, chúng ta cần quan tâm đến một số hình
+thức đo độ biến dạng.
+
+Một phép đo sự biến dạng là 1 đại lượng toán học chỉ mức
+độ gần đúng so với giá trị ban đầu của nó sử dụng một số
+tiêu chí biến dạng. Khi nhìn vào dữ liệu đã nén, người ta
+thường nghĩ về sự khác biệt số giữa dữ liệu gốc và dữ liệu
+được tái tạo. Tuy nhiên, khi dữ liệu được nén là một ảnh,
+phép đo như vậy có thể không mang lại một kết quả như mong muốn.
+
+Ví dụ: nếu hình ảnh được tái tạo giống với ảnh gốc ngoại
+trừ việc nó bị lệch sang phải bởi một đường quét dọc, thì
+một người quan sát bình thường sẽ gặp khó khăn trong việc
+phân biệt nó với ảnh gốc và do đó sẽ kết luận rằng sự biến
+dạng nhỏ. Tuy nhiên, khi tính toán được thực hiện bằng số,
+chúng ta nhận thấy sự biến dạng lớn, do những thay đổi lớn
+trong các pixel riêng lẻ của ảnh được tái tạo. Vấn đề là
+chúng ta cần một phép đo về sự biến đổi cảm giác, chứ không
+phải một phương pháp số học ngờ nghệch.
+
+Trong số rất nhiều phép đo biến dạng cảm giác đã được tìm ra,
+chúng ta trình bày ba phép đo phổ biến nhất được sử dụng
+trong nén hình ảnh. Nếu chúng ta quan tâm đến sự khác nhau
+pixel trung bình, thì sai số bình phương(MSE- Mean square error)
+$\sigma^2$ thường được sử dụng :
+
+\begin{equation}
+    \sigma^2 =  \frac{1}{N} \sum_{n=1}^{N} {\left( {X_n-Y_n} \right)}^2
+\end{equation}
+
+Với $X_n$, $Y_n$, $N$ lần lượt là chuỗi dữ liệu vào, chuỗi dữ liệu phục hồi,
+độ dài của chuỗi dữ liệu
 
 \section{Các kĩ thuật nén codec thường được sử dụng}
+
+Mã hóa biến đổi(Transform coding), một số hình thức nén mất dữ liệu có thể được coi là ứng dụng
+của mã hóa biến đổi , là một kiểu nén dữ liệu được sử dụng cho
+hình ảnh kỹ thuật số tín hiệu , âm thanh kỹ thuật số và video kỹ thuật số .
+
+Việc chuyển đổi thường được sử dụng để cho phép lượng tử
+hóa tốt hơn (nhắm mục tiêu hơn). Kiến thức về ứng dụng được
+sử dụng để chọn thông tin cần loại bỏ, do đó làm giảm băng
+thông của nó. Thông tin còn lại sau đó có thể được nén thông
+qua nhiều phương pháp. Khi đầu ra được giải mã, kết quả có
+thể không giống với đầu vào ban đầu, nhưng được mong đợi là
+đủ gần với mục đích của ứng dụng.
+
+\subsection{Phương pháp biến đổi Cosin rời rạc}
+
+Biến đổi Cosin rời rạc (Discrete Cosine Transform - DCT)
+là một kỹ thuật mã hóa biến đổi được sử dụng rộng rãi,
+có khả năng thực hiện mối tương quan của tín hiệu đầu vào
+theo cách độc lập với dữ liệu.
+
+\subsection{Biến đổi Karhunen-Loeve}
+
+\section{Mạng nơ-ron nhân tạo}
 
 \section{Bộ mã hóa tự động (Autoencoder)}
 
@@ -72,7 +142,7 @@ tiêu chuẩn để áp đặt 2 ràng buộc này và điều chỉnh sự cân
 
 \subsection{Bộ mã hóa tự động chưa hoàn chỉnh}
 
-Kiến trúc đơn giản nhất để xây dựng bộ mã tự động là hạn chế số lượng
+Kiến trúc đơn giản nhất để xây dựng bộ mã hóa tự động là hạn chế số lượng
 nút hiện diện trong (các) lớp ẩn của mạng, hạn chế lượng thông tin có
 thể truyền qua mạng. Bằng cách sử dụng các hình phạt mạng theo lỗi xây dựng lại,
 mô hình của chúng tôi có thể tìm hiểu các thuộc tính quan trọng nhất của dữ
@@ -95,7 +165,7 @@ mạnh mẽ hơn của PCA (kĩ thuật giảm chiều dữ liệu tuyến tính
 
 \newpage
 Trong khi PCA cố gắng khám phá một siêu phẳng có chiều thấp hơn
-mô tả dữ liệu ban đầu, thì các bộ mã tự động có khả năng học các
+mô tả dữ liệu ban đầu, thì các bộ mã hóa tự động có khả năng học các
 đa tạp phi tuyến (đa tạp được định nghĩa theo thuật ngữ đơn giản
 là liên tục, không giao nhau bề mặt). Sự khác biệt giữa hai cách
 tiếp cận này được hình dung bên dưới.
@@ -109,22 +179,22 @@ tiếp cận này được hình dung bên dưới.
     \caption{Mô tả mô hình bộ mã hóa tự động chưa hoàn chỉnh.}
 \end{figure}
 
-Một bộ mã tự động chưa hoàn chỉnh không có thuật ngữ chính quy
+Một bộ mã hóa tự động chưa hoàn chỉnh không có thuật ngữ chính quy
 rõ ràng - chúng tôi chỉ đào tạo mô hình của mình theo sự mất mát
 khi xây dựng lại. Do đó, cách duy nhất của chúng tôi để đảm bảo rằng
 mô hình không ghi nhớ dữ liệu đầu vào là đảm bảo rằng chúng tôi đã
 hạn chế đủ số lượng các nút trong (các) lớp ẩn.
 
-Đối với các bộ mã tự động sâu, chúng ta cũng phải lưu ý về dung
+Đối với các bộ mã hóa tự động sâu, chúng ta cũng phải lưu ý về dung
 lượng của bộ mã hóa và các kiểu máy giải mã của chúng ta.
 Ngay cả khi "lớp nút cổ chai" chỉ là một nút ẩn, mô hình của
 chúng tôi vẫn có thể ghi nhớ dữ liệu huấn luyện với điều kiện là
 các mô hình bộ mã hóa và giải mã có đủ khả năng để học một số chức
 năng tùy ý có thể ánh xạ dữ liệu thành một chỉ mục.
 
-\subsection{Bộ mã tự động thưa thớt}
+\subsection{Bộ mã hóa tự động thưa thớt}
 
-Các bộ mã tự động thưa thớt cung cấp cho chúng ta một phương pháp
+Các bộ mã hóa tự động thưa thớt cung cấp cho chúng ta một phương pháp
 thay thế để giới thiệu một nút thắt cổ chai thông tin mà không
 yêu cầu giảm số lượng nút ở các lớp ẩn của chúng ta. Thay vào đó,
 chúng tôi sẽ xây dựng hàm mất mát của chúng tôi để chúng tôi
@@ -142,7 +212,7 @@ giải mã chỉ dựa vào việc kích hoạt một số lượng nhỏ nơ-ro
 \end{figure}
 
 \newpage
-Một bộ mã tự động thưa thớt chung được hiển thị bên trên nơi
+Một bộ mã hóa tự động thưa thớt chung được hiển thị bên trên nơi
 độ mờ của một nút tương ứng với mức độ kích hoạt. Điều quan
 trọng cần lưu ý là các nút riêng lẻ của một mô hình được đào
 tạo kích hoạt phụ thuộc vào dữ liệu , các đầu vào khác nhau
@@ -150,9 +220,9 @@ sẽ dẫn đến việc kích hoạt các nút khác nhau thông qua mạng.
 
 Một kết quả của thực tế này là chúng tôi cho phép mạng của
 mình nhạy cảm với các nút lớp ẩn riêng lẻ đối với các thuộc
-tính cụ thể của dữ liệu đầu vào. Trong khi một bộ mã tự động
+tính cụ thể của dữ liệu đầu vào. Trong khi một bộ mã hóa tự động
 chưa hoàn chỉnh sẽ sử dụng toàn bộ mạng cho mỗi lần quan sát,
-một bộ mã tự động thưa thớt sẽ buộc phải kích hoạt có chọn lọc
+một bộ mã hóa tự động thưa thớt sẽ buộc phải kích hoạt có chọn lọc
 các vùng của mạng tùy thuộc vào dữ liệu đầu vào. Do đó, chúng
 tôi đã giới hạn khả năng ghi nhớ dữ liệu đầu vào của mạng mà
 không giới hạn khả năng mạng trích xuất các tính năng từ dữ liệu.
@@ -214,6 +284,32 @@ hình học một trường vectơ để ánh xạ dữ liệu đầu vào tới
 tạp có chiều thấp hơn (nhớ lại từ hình ảnh trước đây của tôi rằng
 một đa tạp mô tả vùng mật độ cao nơi dữ liệu đầu vào tập trung).
 
+\section{Ngôn ngữ lập trình Python và thư viện PyTorch}
 
+\subsection{Ngôn ngữ lập trình Python}
+
+Python là ngôn ngữ lập trình có mục đích chung được bắt đầu bởi Guido van Rossum,
+nó trở nên rất phổ biến rất nhanh trong thời gian gần đây, chủ yếu vì tính đơn giản
+và khả năng đọc mã của nó. Nó cho phép lập trình viên thể hiện ý tưởng trong ít dòng
+mã hơn mà không làm giảm khả năng đọc.
+
+So với các ngôn ngữ như C/C++, Python chậm hơn. Điều đó nói rằng, Python có thể dễ dàng
+được mở rộng với C/C++, cho phép chúng ta viết mã chuyên sâu tính toán trong C/C++
+và tạo các trình bao bọc Python có thể được sử dụng làm mô-đun Python.
+Điều này mang lại cho chúng ta hai lợi thế: thứ nhất, mã nhanh như mã C/C++ gốc
+(vì đây là mã C++ thực tế hoạt động ở chế độ nền) và thứ hai, mã dễ dàng hơn trong
+Python so với C/C++. OpenCV - Python là một trình bao bọc Python để thực hiện OpenCV C++
+ban đầu.
+
+\subsection{Thư viện PyTorch}
+
+PyTorch là một thư viện hỗ trợ tạo ra các mô hình mạng nơ-ron nhân tạo và sử
+dụng chúng trong các ứng dụng khác nhau. Trên thực tế PyTorch chính là một
+gói hỗ trợ tính toán khoa học (scientific computing) như tài liệu chính
+thức của PyTorch đã đề cập
+
+PyTorch, tương tự như Python, nó được thiết kế tập trung vào tính dễ
+sử dụng và thậm chí người dùng có kiến thức lập trình rất cơ bản cũng có thể
+sử dụng nó trong các dự án có liên quan đến học sâu.
 
 

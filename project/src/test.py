@@ -88,7 +88,7 @@ def test(cfg: Namespace) -> None:
         )
 
         T.save(img, f'datasets/compressing/img_origin{batch_idx}')
-        
+
         # save img origin
         save_imgs(
             imgs=img.unsqueeze(0),
@@ -102,7 +102,9 @@ def test(cfg: Namespace) -> None:
             to_size=(3, 768, 2 * 1280),
             name=exp_dir / f"out/test_{batch_idx}.png",
         )
+    print('input size : ', x.size()[1:])
     summary(model, x.size()[1:])
+    print(model)
 
 
 if __name__ == "__main__":

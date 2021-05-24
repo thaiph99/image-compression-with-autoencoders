@@ -145,6 +145,7 @@ def train(cfg: Namespace) -> None:
 
             T.save(model.state_dict(), exp_dir /
                    f"checkpoint/model_{epoch_idx}.pth")
+            
         # -- end epoch every
     # -- end epoch
 
@@ -153,6 +154,7 @@ def train(cfg: Namespace) -> None:
     T.save(model.state_dict(), root_dir /
            f"weights/model_final0_00{int(epoch_avg*1000)}.pth")
     # cleaning
+    tb_writer.add_graph(model)
     tb_writer.close()
 
 
