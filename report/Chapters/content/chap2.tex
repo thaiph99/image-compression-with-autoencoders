@@ -48,7 +48,7 @@ Trong số rất nhiều phép đo biến dạng cảm giác đã được tìm 
 chúng ta trình bày ba phép đo phổ biến nhất được sử dụng
 trong nén hình ảnh. Nếu chúng ta quan tâm đến sự khác nhau
 pixel trung bình, thì sai số bình phương(MSE- Mean square error)
-$\sigma^2$ thường được sử dụng :
+$\sigma^2$ thường được sử dụng:
 
 \begin{equation}
     \sigma^2 =  \frac{1}{N} \sum_{n=1}^{N} {\left( {X_n-Y_n} \right)}^2
@@ -58,6 +58,7 @@ Với $X_n$, $Y_n$, $N$ lần lượt là chuỗi dữ liệu vào, chuỗi dữ
 độ dài của chuỗi dữ liệu
 
 \section{Các kĩ thuật nén codec thường được sử dụng}
+
 
 Mã hóa biến đổi(Transform coding), một số hình thức nén mất dữ liệu có thể được coi là ứng dụng
 của mã hóa biến đổi , là một kiểu nén dữ liệu được sử dụng cho
@@ -78,15 +79,274 @@ là một kỹ thuật mã hóa biến đổi được sử dụng rộng rãi,
 có khả năng thực hiện mối tương quan của tín hiệu đầu vào
 theo cách độc lập với dữ liệu.
 
+Nguyên tắc chính của phương pháp mã hóa này là biến đổi các
+giá trị pixel của ảnh trong miền không gian sang một tập các
+giá trị khác trong miền tần số, sao cho các hệ số trong tập giá
+trị mới này có tương quan giữa các điểm ảnh gần nhau nhỏ hơn.
+
+\begin{figure}
+    \begin{subfigure}{0.8\textwidth}
+        \includegraphics[width=1.0\linewidth]{Chapters/items/DCT.jpg}
+        \caption{}
+        \label{fig: dct}
+    \end{subfigure}
+    \caption{Sơ đồ mã hóa, giải mã sử dụng DCT}
+\end{figure}
+
+\subsubsection{Giải thích DCT}
+Cho một hàm f(i,j) với 2 biến số nguyên i và j (là thành phần của ảnh),
+DCT 2 chiều biến đổi nó sang một hàm mới F(u,v) với u, v chạy trên
+cùng một phạm vi với i và j.
+
+Công thức chung cho phép biến đổi là:
+\begin{equation*}
+    \mathbf{F}_{(u,v)} = \frac{C(u)}{\sqrt{N/2}} \frac{C(v)}{\sqrt{N/2}} \sum_{i=0}^{N-1} \sum_{j=0}^{N-1}  \cos \frac{(2i+1)u\pi}{2N} \cos\frac{(2j+1)v\pi}{2N} \mathbf{f}_{(i,j)}
+\end{equation*}
+
+Trong đó ${C(u)}$ và ${C(v)}$ được xác định bởi:
+
+\begin{equation*}
+    C(u) = \begin{cases} \frac{1}{\sqrt{2}} & u = 0 \\ 1 & u>0 \end{cases}\text{.}
+\end{equation*}
+
+Biến đổi DCT nghịch:
+\begin{equation*}
+    \mathbf{\tilde{f}}_{(i,j)} = \frac{C(u)}{\sqrt{N/2}} \frac{C(v)}{\sqrt{N/2}} \sum_{i=0}^{N-1} \sum_{j=0}^{N-1}  \cos \frac{(2i+1)u\pi}{2N} \cos\frac{(2j+1)v\pi}{2N} \mathbf{F}_{(u,v)}
+\end{equation*}
+
+Trong tiêu chuẩn nén ảnh JPEG, một khối ảnh được xác định có kích thước N = 8.
+Các phép biến đổi 2D có thể áp dụng cho các tín hiệu 2D, chẳng hạn như ảnh kỹ
+thuật số.
+
+
+
 \subsection{Biến đổi Karhunen-Loeve}
 
-\section{Mạng nơ-ron nhân tạo}
+Phép biến đổi Karhunen-Loeve (KLT) là một phép biến đổi tuyến tính
+có thể đảo ngược khai thác các đặc tính thống kê của biểu diễn vectơ.
+Thuộc tính chính của nó là nó trang trí tối ưu đầu vào. Để làm như vậy,
+nó phù hợp với một ellipsoid n chiều xung quanh dữ liệu (trung bình đã trừ).
+Trục ellipsoid chính là hướng thay đổi chính của dữ liệu.
+
+Hãy nghĩ về một điếu xì gà không may bị giẫm phải. Dữ liệu xì
+gà bao gồm một đám mây điểm trong không gian 3 cung cấp tọa độ vị trí của các điểm đo được trong điếu xì gà. Trục dài của điếu xì gà sẽ được xác định bởi một chương trình thống kê là trục KLT đầu tiên.
+
+Trục quan trọng thứ hai là trục nằm ngang qua điếu xì gà bẹp,
+vuông góc với trục thứ nhất. Trục thứ ba là trực giao với cả hai
+và theo phương thẳng đứng, mỏng. Một chương trình thành phần KLT chỉ
+thực hiện phân tích này.
+
+\section{Mạng nơ-ron nhân tạo (Artificial Neural Network - ANN)}
+
+Artificial neural network (ANN) có thể coi là một tập hơn của các lớp.
+Các lớp ẩn được tạo ra từ perceptron đơn lẻ sẽ được kết hợp với nhau.
+Các lớp ẩn sử dụng các hàm kích hoạt phi tuyến ánh xạ các lớp đầu vào
+thành các lớp đầu ra trong một không gian có số chiều thấp hơn và được
+gọi chung là mạng nơ ron nhân tạo. ANN có thể hiểu là một hàm biến đổi
+(ánh xạ) từ đầu vào đến đầu ra. Ánh xạ này được tính bằng cách thêm và
+các ma trận trọng số của các đầu vào với các độ lệch biases. Các giá
+trị của ma trận trong số trọng số và giá trị của độ sai lệch biases
+tương ứng với kiến trúc được gọi là mô hình hay model.
+
+\begin{figure}
+    \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=1.0\linewidth]{Chapters/items/ann.jpg}
+        \caption{}
+        \label{fig: ann}
+    \end{subfigure}
+    \caption{Ví dụ mạng nơ-ron nhân tạo đơn giản}
+\end{figure}
+
+
+Quá trình huấn luyện mô hình là quá trình xác định các giá trị của
+các trọng số và hệ số tự do. Các giá trị của chúng được khởi tạo với
+các giá trị ngẫu nhiên khi bắt đầu huấn luyện. Muốn huấn luyện chúng
+ta cần phải định nghĩa bằng hàm lỗi của mạng. Lúc này chúng ta
+sẽ nhắc đến hai giá trị đó là ground truth - tức là giá trị
+thực tế có trong tập dữ liệu huấn luyện và predict output là
+giá trị mà mô hình dự đoán. Lỗi được tính bằng cách sử dụng
+hàm loss định nghĩa dựa trên sự khác nhau giữa hai giá trị này.
+Có nhiều kiểu định nghĩa hàm loss khác nhau mà chúng ta sẽ thực
+hiện trong series này. Làm đến phần nào chúng ta sẽ nói rõ hơn ở
+phần đó. Dựa trên gíá trị của hàm đánh giá mất mát được tính toán, các trọng
+số trọng số được điều chỉnh tại mỗ bước trong quá trình huấn luyện.
+uá trình huấn luyện thực chất là tìm ra các đặc trưng features trong
+dữ liệu đầu vào. Các features này là một đại diện tốt hơn so với dữ
+liệu thô.
+
+
+\section{Mô hình mạng neural tích chập (Convolutional neural network - CNN)}
+
+Mạng neural tích chập (CNN) là một trong những mô hình học sâu\cite{repec} tiên tiến phổ biến nhất và
+có ảnh hưởng nhất với cộng đồng thị giác máy tính (Computer vision). CNN thường được dùng
+trong các bài toán nhận dạng ảnh, phân tích ảnh, xử lý ngôn ngữ tự nhiên dưới dạng ảnh các bước sóng.
+Và hầu hết đều cho hiệu quả tốt đến rất tốt.
+
+CNN là một kiến trúc mạng neural sinh ra để xử lý các dữ liệu phi cấu trúc dạng ảnh. Có 2 loại lớp
+chính trong CNN: lớp tích chập (Convolutional layer) và lớp gộp (Pooling layer)
+
+\begin{figure}
+    \begin{subfigure}{1.\textwidth}
+        \includegraphics[width=1.\linewidth]{Chapters/items/cnn2_1.jpg}
+        \label{fig: chap2_2}
+    \end{subfigure}
+    \caption{CNN cho bài toán nhận diện chữ số.}
+\end{figure}
+\subsection{Lớp tích chập}
+
+Lớp tích chập là lớp quan trọng nhất và thường cũng là lớp đầu tiên của của mô hình CNN.
+Lớp này có chức năng chính là phát hiện các đặc trưng có tính không gian hiệu quả.
+Trong tầng này có 4 đối tượng chính là: ma trận đầu vào, bộ lọc (filters) và trường thụ cảm,
+bản đồ đặc trưng (feature map). Lớp tích chập nhận đầu vào là một ma trận 3 chiều và một bộ lọc cần phải học.
+Bộ lọc này sẽ trượt qua từng vị trí trên bức ảnh để tính tích chập (convolution)
+giữa bộ lọc và phần tương ứng trên bức ảnh. Phần tương ứng này trên bức ảnh gọi là
+trường thục cảm (receptive field), tức là vùng mà một neuron có thể nhìn thấy để đưa
+ra quyết định, và mà trận cho ra bởi quá trình này được gọi là bản đồ đặc trưng (feature map).
+
+Để hình dung, có thể tưởng tượng, bộ filters giống như các tháp canh trong nhà tù quét
+lần lượt qua không gian xung quanh để tìm kiếm tên tù nhân bỏ trốn.
+Khi phát hiện tên tù nhân bỏ trốn, thì chuông báo động sẽ reo lên, giống như các bộ lọc
+tìm kiếm được đặc trưng nhất định thì tích chập đó sẽ cho giá trị tương ứng.
+
+\begin{enumerate}
+    \item Lớp tích chập được coi như xác định đặc trưng
+          \begin{itemize}
+              \item Lớp tích chập có chức năng chính là phát hiện đặc trưng cụ thể của bức ảnh.
+                    Những đặc trưng này bao gồm đặc trưng cơ bản là góc, cạnh, màu sắc, hoặc đặc trưng
+                    phức tạp hơn như texture của ảnh. Vì bộ lọc quét qua toàn bộ bức ảnh, nên những
+                    đặc trưng này có thể nằm ở vị trí bất kì trong bức ảnh, cho dù ảnh bị xoáy trái/phải
+                    thì những đặc trưng này vẫn bị phát hiện.
+              \item Ở minh họa dưới, có một bộ lọc 5x5 dùng để phát hiện góc/cạnh, với bộ lọc này
+                    chỉ có giá trị một tại các điểm tương ứng một góc cong.
+                    \begin{figure}
+                        \begin{subfigure}{0.6\textwidth}
+                            \begin{center}
+                                \includegraphics[width=0.6\linewidth]{Chapters/items/chap2_3.jpg}
+                            \end{center}
+                            \label{fig: chap2_3}
+                        \end{subfigure}
+                        \caption{Bộ lọc phát hiện cạnh}
+                    \end{figure}
+              \item Dùng bộ lọc ở trên trược qua ảnh của nhân vật Olaf trong trong bộ phim Frozen.
+                    Chúng ta thấy rằng, chỉ ở những vị trí trên bức ảnh có dạng góc như đặc trưng ở
+                    bộ lọc thì mới có giá trị lớn trên bản đồ đặc trưng, những vị trí còn lại sẽ cho giá trị
+                    thấp hơn. Điều này có nghĩa là, bộ lọc đã phát hiện thành công một dạng góc/cạnh
+                    trên dự liệu đầu vào. Tập hơn nhiều bộ lọc sẽ cho phép các bạn phát hiện được
+                    nhiều loại đặc trưng khác nhau,và giúp định danh được đối tượng.
+                    \begin{figure}
+                        \begin{subfigure}{1.\textwidth}
+                            \begin{center}
+                                \includegraphics[width=1.\linewidth]{Chapters/items/chap2_4.jpg}
+                            \end{center}
+                            \label{fig: chap2_4}
+                        \end{subfigure}
+                        \caption{Bộ lọc phát hiện cạnh}
+                    \end{figure}
+          \end{itemize}
+    \item Các tham số: Kích thước bộ lọc, bước nhảy, lề
+          \begin{itemize}
+              \item Kích thước bộ lọc là một trong những tham số quan trọng nhất của lớp tích chập.
+                    Kích thước này tỉ lệ thuận với số tham số cần học tại mỗi lớp tích chập và
+                    là tham số quyết định trường thụ cảm của tầng này. Kích thước phổ biến nhất của bộ lọc
+                    là 3x3.
+                    \begin{figure}
+                        \begin{subfigure}{1.\textwidth}
+                            \begin{center}
+                                \includegraphics[width=1.\linewidth]{Chapters/items/chap2_5.jpg}
+                            \end{center}
+                            \label{fig: chap2_5}
+                        \end{subfigure}
+                        \caption{Cách hoạt động của bộ lọc (filter)}
+                    \end{figure}
+              \item Kích thước bộ lọc nhỏ được ưu tiên lựa chọn thay kích thước lớn vì những lý do sau đây:
+                    \begin{itemize}
+                        \item Cho phép nhìn được các vùng nhỏ
+                        \item Trích rút được những đặc trưng có tính cục bộ cao
+                        \item Phát hiện đặc trưng nhỏ
+                        \item Đặc trưng được trích rút sẽ nhiều, đa dạng
+                        \item Giảm kích thước ảnh chậm, cho phép mạng sâu hơn
+                        \item Chia sẻ trọng số tốt hơn
+                    \end{itemize}
+              \item Kích thước của bộ lọc sẽ là những số lẻ để kết quả của phép tích chập sẽ nằm ở giữa ma trận
+          \end{itemize}
+\end{enumerate}
+
+\subsection{Lớp phi tuyến}
+
+Để các mô hình học sâu tìm được mối quan hệ phức tạp giữa các đặc trưng, cũng như tìm được những đặc trưng quan trọng
+(là sự kết hợp phi tuyến giữa các đặc trưng cơ bản khác) thì các mối quan hệ đó khó có thể được biểu diễn dưới các hàm tuyến tính
+mà cần sự kết hợp phi tuyến tính, chính vì vậy các hàm kích hoạt phi tuyến ra đời nhằm phá vỡ sự tuyến tính của giữa các đặc trưng từ đó tìm
+ra các đặc trưng mới quan trọng hơn.
+
+Hiện nay hàm kích hoạt được sử dụng phổ biến nhất là hàm ReLU (Rectified Linear Units). Hàm ReLU được ưa chuộm vì tính đơn giản và cho kết quả tốt hơn
+ReLU cũng như những hàm kích hoạt khác, được đặt ngay sau tầng convolution, ReLU sẽ gán những giá trị âm bằng 0 và giữ nguyên giá trị của đầu vào khi lớn hơn 0.
+
+ReLU cũng có một số vấn đề tiềm ẩn như không có đạo hàm tại điểm 0, giá trị của hàm ReLU có thể lớn đến vô cùng và
+nếu chúng ta không khởi tạo trọng số cẩn thận, hoặc khởi tạo tỉ lệ học (learning rate) quá lớn thì những neuron ở tầng này sẽ rơi vào trạng thái chết, tức là luôn có giá trị < 0.
+
+\begin{figure}
+    \begin{subfigure}{1.\textwidth}
+        \begin{center}
+            \includegraphics[width=1.\linewidth]{Chapters/items/chap2_6.jpg}
+        \end{center}
+        \label{fig: chap2_6}
+    \end{subfigure}
+    \caption{Một số hàm kích hoạt thường được sử dụng}
+\end{figure}
+
+\newpage
+\subsection{Lớp gộp}
+
+Sau hàm kích hoạt, thông thường chúng ta sử dụng lớp gộp. Một số loại lớp gộp phổ biến như là max-pooling, average pooling,
+với chức năng chính là giảm chiều của tầng trước đó. Với một lớp gộp có kích thước 2x2,
+các bạn cần phải trượt bộ lọc 2x2 này trên những vùng ảnh có kích thước tương tự rồi sau đó tính giá trị lớn nhất,
+hay trung bình cho vùng ảnh đó.
+
+\begin{figure}
+    \begin{subfigure}{1.\textwidth}
+        \begin{center}
+            \includegraphics[width=1.\linewidth]{Chapters/items/chap2_7.jpg}
+        \end{center}
+        \label{fig: chap2_7}
+    \end{subfigure}
+    \caption{Ví dụ về max-pooling}
+\end{figure}
+
+Ý tưởng đằng sau lớp gộp là vị trí tuyết đối của những đặc trưng trong không gian ảnh không
+còn cần cần thiết, thay vào đó vị trí tương đối giữ các đặc trưng đã đủ để phân loại đối tượng.
+Hơn giảm tầng pooling có khả năng giảm chiều cực kì nhiều, làm hạn chế overfit,
+và giảm thời gian huấn luyện tốt.
+
+
+\subsection{Lớp kết nối đầy đủ}
+
+Lớp cuối cùng của mô hình CNN trong bài toán phân loại ảnh là lớp kết nối đầy đủ.
+Lớp này có chức năng chuyển ma trận đặc trưng ở tầng trước thành các vector chứa xác suất của các
+đối tượng cần được dự đoán.
+
+Quá trình huấn luyện mô hình CNN cho bài toán phân loại ảnh cũng tương tự như huấn luyện các
+mô hình khác. Cần có hàm đánh giá mất mát để tính sai số giữa dự đoán của mô hình và nhãn chính xác,
+để sử dụng cơ chế của thuật toán lan truyền ngược (backprobagation) cho quá trình cập nhật trọng số.
+
+\begin{figure}
+    \begin{subfigure}{1.\textwidth}
+        \begin{center}
+            \includegraphics[width=1.\linewidth]{Chapters/items/chap2_8.jpg}
+        \end{center}
+        \label{fig: chap2_8}
+    \end{subfigure}
+    \caption{Một CNN đơn giản với đầy đủ các lớp}
+\end{figure}
+
+\newpage
+
+
 
 \section{Bộ mã hóa tự động (Autoencoder)}
 
 Bộ mã hóa tự động là một kỹ thuật học tập không có giám sát,
 trong đó chúng em tận dụng mạng nơ-ron cho nhiệm vụ của học để biểu diễn các tập
-giá trị dưới dạng nén, học cách để giải mã dữ liệu từ dạng nén.
+giá trị dưới dạng nén và học cách để giải mã dữ liệu từ dạng nén.
 
 Cụ thể, chúng em sẽ thiết kế một kiến trúc mạng nơ-ron nhân tạo sau đó áp đặt một
 nút thắt cổ chai trong mạng - điều này đại diện cho sự nén lại một cách tự động.
@@ -102,7 +362,6 @@ chiều không gian hơn, đây chính là biểu diễn nén của đầu vào.
     \caption{Bộ mã hóa tự động.}
 \end{figure}
 
-\newpage
 Nếu các tính năng đầu vào từng độc lập của nhau, việc nén này và tái tạo sau đó sẽ là
 một nhiệm vụ rất khó khăn. Tuy nhiên, nếu một số loại cấu trúc tồn tại trong dữ liệu
 (ví dụ như: mối tương quan giữa các tính năng đầu vào), cấu trúc này có thể được
@@ -115,7 +374,6 @@ Bộ mã hóa tự động lý tưởng cân bằng những điều sau đây:
           nhớ hoặc trang bị quá nhiều dữ liệu đào tạo.
 \end{itemize}
 
-\newpage
 Sự đánh đổi này buộc mô hình chỉ duy trì các biến thể trong dữ liệu cần
 thiết để cấu trúc lại đầu vào mà không giữ lại các phần dư thừa trong đầu vào.
 Đối với hầu hết các trường hợp, điều này liên quan đến việc xây dựng một hàm mất mát
@@ -248,7 +506,7 @@ xử phạt các kích hoạt quá mức. Các cách này là:
     \item \textbf{KL-phân kỳ} Về bản chất, KL-phân kỳ là thước đo sự
           khác biệt giữa hai phân phối xác suất. Chúng ta có thể xác định
           tham số thưa thớt \textit{p} biểu thị kích hoạt trung bình của
-          một nơ-ron trên một tập hợp các mẫu. Kỳ vọng này có thể được tính là :
+          một nơ-ron trên một tập hợp các mẫu. Kỳ vọng này có thể được tính là:
           \begin{equation}
               {{\hat \rho }_ j} = \frac{1}{m}\sum\limits_{i} {\left[ {a_i^{\left( h \right)}\left( x \right)} \right]}
           \end{equation}

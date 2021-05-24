@@ -1,3 +1,10 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{repec}
+R.~J.Hassan and A.~M. Abdulazeez.
+\newblock {Deep Learning Convolutional Neural Network for Face Recognition: A
+  Review}.
+\newblock {\em International Journal of Science and Business}, 5(2):114--127,
+  2021.
 
 \end{thebibliography}

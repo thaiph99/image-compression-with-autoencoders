@@ -1,8 +1,8 @@
 \contentsline {chapter}{MỞ ĐẦU}{4}{chapter*.2}%
 \contentsline {section}{\numberline {0.1}Lý do chọn đề tài}{4}{section.0.1}%
 \contentsline {section}{\numberline {0.2}Mục đích của đề tài}{4}{section.0.2}%
-\contentsline {section}{\numberline {0.3}Đối tượng và phạm vi nghiên cứu của đề tài}{4}{section.0.3}%
-\contentsline {subsection}{\numberline {0.3.1}Đối tượng}{4}{subsection.0.3.1}%
+\contentsline {section}{\numberline {0.3}Đối tượng và phạm vi nghiên cứu của đề tài}{5}{section.0.3}%
+\contentsline {subsection}{\numberline {0.3.1}Đối tượng}{5}{subsection.0.3.1}%
 \contentsline {subsection}{\numberline {0.3.2}Phạm vi nghiên cứu}{5}{subsection.0.3.2}%
 \contentsline {section}{\numberline {0.4}Bảng các ký hiệu}{6}{section.0.4}%
 \contentsline {chapter}{\numberline {1}Nghiên cứu tổng quan}{7}{chapter.1}%
@@ -15,27 +15,33 @@
 \contentsline {section}{\numberline {2.1}Tổng quan về các kĩ thuật nén mất mát thông tin}{10}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Các kĩ thuật nén codec thường được sử dụng}{11}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Phương pháp biến đổi Cosin rời rạc}{11}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Biến đổi Karhunen-Loeve}{12}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Mạng nơ-ron nhân tạo}{12}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Bộ mã hóa tự động (Autoencoder)}{12}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Bộ mã hóa tự động chưa hoàn chỉnh}{14}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Bộ mã hóa tự động thưa thớt}{16}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Bộ mã hóa tự động giảm nhiễu}{18}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Ngôn ngữ lập trình Python và thư viện PyTorch}{18}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Ngôn ngữ lập trình Python}{18}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Thư viện PyTorch}{19}{subsection.2.5.2}%
-\contentsline {chapter}{\numberline {3}Triển khai chương trình và đánh giá hiệu suất}{20}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Triển khai chương trình}{20}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Thiết kế các lớp mạng}{21}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Lựa chọn hám đánh giá mất mát}{21}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Lựa chọn thuật toán tối ưu}{21}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Huấn luyện mô hình với tập dữ liệu cần nén}{21}{subsection.3.1.4}%
-\contentsline {subsubsection}{Tập dữ liệu sử dụng}{21}{subsection.3.1.4}%
-\contentsline {subsubsection}{Các tham số huấn luyện mô hình}{21}{figure.caption.9}%
-\contentsline {subsubsection}{Quá trình huấn luyện mô hình}{22}{figure.caption.10}%
-\contentsline {subsection}{\numberline {3.1.5}Thực hiện nén, giải nén}{23}{subsection.3.1.5}%
-\contentsline {section}{\numberline {3.2}Đánh giá hiệu suất nén}{23}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Kết luận và kiến nghị}{24}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Kết luận}{24}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Kiến nghị}{24}{section.4.2}%
-\contentsline {chapter}{Tài liệu tham khảo}{26}{chapter*.14}%
+\contentsline {subsubsection}{Giải thích DCT}{12}{figure.caption.4}%
+\contentsline {subsection}{\numberline {2.2.2}Biến đổi Karhunen-Loeve}{13}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Mạng nơ-ron nhân tạo (Artificial Neural Network - ANN)}{13}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Mô hình mạng neural tích chập (Convolutional neural network - CNN)}{14}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Lớp tích chập}{15}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Lớp phi tuyến}{18}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Lớp gộp}{19}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Lớp kết nối đầy đủ}{20}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Bộ mã hóa tự động (Autoencoder)}{21}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Bộ mã hóa tự động chưa hoàn chỉnh}{22}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Bộ mã hóa tự động thưa thớt}{24}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Bộ mã hóa tự động giảm nhiễu}{26}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Ngôn ngữ lập trình Python và thư viện PyTorch}{26}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Ngôn ngữ lập trình Python}{26}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Thư viện PyTorch}{27}{subsection.2.6.2}%
+\contentsline {chapter}{\numberline {3}Triển khai chương trình và đánh giá hiệu suất}{28}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Triển khai chương trình}{28}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Thiết kế các lớp mạng}{29}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Lựa chọn thuật toán tối ưu}{29}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Lựa chọn hàm đánh giá mất mát}{30}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Huấn luyện mô hình với tập dữ liệu cần nén}{31}{subsection.3.1.4}%
+\contentsline {subsubsection}{Tập dữ liệu sử dụng}{31}{subsection.3.1.4}%
+\contentsline {subsubsection}{Các tham số huấn luyện mô hình}{31}{figure.caption.19}%
+\contentsline {subsubsection}{Quá trình huấn luyện mô hình}{32}{figure.caption.20}%
+\contentsline {subsection}{\numberline {3.1.5}Thực hiện nén, giải nén}{33}{subsection.3.1.5}%
+\contentsline {section}{\numberline {3.2}Đánh giá hiệu suất nén}{33}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Kết luận và kiến nghị}{34}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Kết luận}{34}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Kiến nghị}{34}{section.4.2}%
+\contentsline {chapter}{Tài liệu tham khảo}{36}{chapter*.24}%
