@@ -56,12 +56,31 @@ Chuẩn nén tín hiệu số gồm có các chuẩn sau:
             Chuẩn MPEG là một chuẩn thông dụng. Đã được sử dụng rộng rãi trong hơn một thập kỉ qua. Tuy nhiên, kích thước file lớn so với những chuẩn mới xuất hiện gần đây, và có thể gây khó khăn cho việc truyền dữ liệu.
       \item Chuẩn MPEG-4:
             Mpeg-4 là chuẩn cho các ứng dụng MultiMedia. Mpeg-4 trở thành một tiêu chuẩn cho nén ảnh kỹ thuật truyền hình số, các ứng dụng về đồ hoạ và Video tương tác hai chiều (Games, Videoconferencing) và các ứng dụng Multimedia tương tác hai chiều (World Wide Web hoặc các ứng dụng nhằm phân phát dữ liệu Video như truyền hình cáp, Internet Video...). Mpeg-4 đã trở thành một tiêu chuẩn công nghệ trong quá trình sản xuất, phân phối và truy cập vào các hệ thống Video. Nó đã góp phần giải quyết vấn đề về dung lượng cho các thiết bị lưu trữ, giải quyết vấn đề về băng thông của đường truyền tín hiệu Video hoặc kết hợp cả hai vấn đề trên.
-      
+
 
 \end{itemize}
 
 \subsection{Kết luận}
 
-Vì sự đa dạng cũng như đã được phát triển nhiều của các phương pháp nén có mất mát nên chúng em
-đã lựa chọn loại nén này làm chủ đề nghiên cứu chính cho đề tài. 
+Những tiến bộ trong việc đào tạo mạng nơ-ron đã giúp cải thiện hiệu suất
+trong một số nguồn cung cấp, nhưng mạng nơ-ron vẫn chưa vượt qua các codec
+hiện có trong việc nén hình ảnh mất dữ liệu. Các kết quả đầu tiên đã đạt
+được gần đây bằng cách sử dụng bộ mã hóa tự động - đặc biệt là trên các hình ảnh nhỏ
+- và mạng nơ ron đã đạt được kết quả tiên tiến nhất trong việc nén hình ảnh
+không mất dữ liệu.
+
+Bộ mã hóa tự động (Autoencoders) có tiềm năng giải quyết nhu cầu ngày càng
+tăng về các thuật
+toán nén mất mát có thể thực hiện được. Tùy thuộc vào tình huống,
+các bộ mã hóa và giải mã có độ phức tạp tính toán khác nhau được yêu cầu.
+Khi gửi dữ liệu từ máy chủ đến thiết bị di động, có thể mong muốn ghép nối
+một bộ mã hóa mạnh mẽ với một bộ giải mã ít phức tạp hơn, nhưng các yêu cầu
+sẽ bị đảo ngược khi gửi dữ liệu theo hướng khác. Lượng sức mạnh tính toán và
+băng thông có sẵn cũng thay đổi theo thời gian khi có công nghệ mới.
+Đối với mục đích lưu trữ, thời gian mã hóa và giải mã ít quan trọng hơn
+so với các ứng dụng phát trực tuyến. Cuối cùng, các thuật toán nén hiện
+tại có thể không tối ưu cho các định dạng phương tiện mới như hình ảnh
+trường ánh sáng, video 360 hoặc nội dung VR
+
+Vậy nên chúng em đã quyết định chọn bộ mã hóa tự động là đối tượng nghiên cứu chính cho chủ đề này
 

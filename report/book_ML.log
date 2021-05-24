@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.19)  23 MAY 2021 18:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.19)  23 MAY 2021 23:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1258,11 +1258,11 @@ This may cause the page layout to be inconsistent, however.
 
  (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/dimred2.tex) (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/content/intro.tex [3] [4
 
-] (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/tableofnotation.tex [5]
+] [5] (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/tableofnotation.tex [6]
 LaTeX Font Info:    Trying to load font information for T5+cmss on input line 9.
  (/usr/share/texlive/texmf-dist/tex/latex/vntex/t5cmss.fd
 File: t5cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-))) [6]
+))) [7]
 \openout2 = `Chapters/content/chap1.aux'.
 
  (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/content/chap1.tex
@@ -1275,10 +1275,10 @@ LaTeX Font Warning: Font shape `T5/cmr/bx/sc' undefined
 LaTeX Font Warning: Font shape `T5/cmr/bx/scit' undefined
 (Font)              using `T5/cmr/bx/it' instead on input line 2.
 
-[7
+[8
 
 
-]) [8] [9]
+] [9]) [10]
 \openout2 = `Chapters/content/chap2.aux'.
 
  (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/content/chap2.tex
@@ -1287,11 +1287,16 @@ Chương 2.
 LaTeX Font Warning: Font shape `T5/cmr/bx/scit' undefined
 (Font)              using `T5/cmr/bx/it' instead on input line 2.
 
-) [10
+<Chapters/items/autoencoder1.png, id=114, 871.255pt x 603.25375pt>
+File: Chapters/items/autoencoder1.png Graphic file (type png)
+<use Chapters/items/autoencoder1.png>
+Package pdftex.def Info: Chapters/items/autoencoder1.png  used on input line 28.
+(pdftex.def)             Requested size: 441.01773pt x 305.35411pt.
+[11
 
 
 
-] [11]
+] [12 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/autoencoder1.png>]) [13]
 \openout2 = `Chapters/content/chap3.aux'.
 
  (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/content/chap3.tex
@@ -1300,62 +1305,113 @@ Chương 3.
 LaTeX Font Warning: Font shape `T5/cmr/bx/scit' undefined
 (Font)              using `T5/cmr/bx/it' instead on input line 2.
 
-<Chapters/items/chap3_1.jpg, id=119, 767.86874pt x 311.1625pt>
+<Chapters/items/chap3_1.jpg, id=137, 767.86874pt x 311.1625pt>
 File: Chapters/items/chap3_1.jpg Graphic file (type jpg)
 <use Chapters/items/chap3_1.jpg>
 Package pdftex.def Info: Chapters/items/chap3_1.jpg  used on input line 31.
 (pdftex.def)             Requested size: 441.01773pt x 178.71764pt.
-[12
+[14
 
 
 
 ]
-<Chapters/items/chap3_2.jpg, id=125, 801.99625pt x 557.08125pt>
+<Chapters/items/chap3_2.jpg, id=142, 801.99625pt x 557.08125pt>
 File: Chapters/items/chap3_2.jpg Graphic file (type jpg)
 <use Chapters/items/chap3_2.jpg>
 Package pdftex.def Info: Chapters/items/chap3_2.jpg  used on input line 52.
 (pdftex.def)             Requested size: 264.61333pt x 183.80338pt.
- [13 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap3_1.jpg> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap3_2.jpg>]
-<Chapters/items/chap3_3.jpg, id=137, 170.0754pt x 81.1833pt>
+ [15 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap3_1.jpg> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap3_2.jpg>]
+<Chapters/items/chap3_3.jpg, id=152, 170.0754pt x 81.1833pt>
 File: Chapters/items/chap3_3.jpg Graphic file (type jpg)
 <use Chapters/items/chap3_3.jpg>
 Package pdftex.def Info: Chapters/items/chap3_3.jpg  used on input line 79.
 (pdftex.def)             Requested size: 264.61333pt x 126.3184pt.
- [14 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap3_3.jpg>]
-<Chapters/items/chap3_4.jpg, id=145, 1044.90375pt x 425.59pt>
+ [16 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap3_3.jpg>]
+<Chapters/items/chap3_4.jpg, id=161, 1044.90375pt x 425.59pt>
 File: Chapters/items/chap3_4.jpg Graphic file (type jpg)
 <use Chapters/items/chap3_4.jpg>
 Package pdftex.def Info: Chapters/items/chap3_4.jpg  used on input line 101.
 (pdftex.def)             Requested size: 441.01773pt x 179.62975pt.
-<Chapters/items/embed.png, id=146, 722.7pt x 542.025pt>
+<Chapters/items/embed.png, id=162, 722.7pt x 542.025pt>
 File: Chapters/items/embed.png Graphic file (type png)
 <use Chapters/items/embed.png>
 Package pdftex.def Info: Chapters/items/embed.png  used on input line 113.
 (pdftex.def)             Requested size: 176.40439pt x 132.30518pt.
- [15 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap3_4.jpg> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/embed.png>]
-<Chapters/items/svm3.jpg, id=155, 3613.5pt x 2409.0pt>
+ [17 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap3_4.jpg> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/embed.png>]
+<Chapters/items/svm3.jpg, id=171, 3613.5pt x 2409.0pt>
 File: Chapters/items/svm3.jpg Graphic file (type jpg)
 <use Chapters/items/svm3.jpg>
 Package pdftex.def Info: Chapters/items/svm3.jpg  used on input line 144.
 (pdftex.def)             Requested size: 352.81552pt x 235.17981pt.
- [16 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/svm3.jpg>]
-<Chapters/items/recog.png, id=164, 1027.84pt x 754.82pt>
+ [18 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/svm3.jpg>]
+<Chapters/items/recog.png, id=179, 1027.84pt x 754.82pt>
 File: Chapters/items/recog.png Graphic file (type png)
 <use Chapters/items/recog.png>
 Package pdftex.def Info: Chapters/items/recog.png  used on input line 164.
 (pdftex.def)             Requested size: 441.01773pt x 323.87523pt.
- [17 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/recog.png>]
-<Chapters/items/accuracy.png, id=172, 639.8304pt x 496.7358pt>
+ [19 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/recog.png>]
+<Chapters/items/accuracy.png, id=188, 639.8304pt x 496.7358pt>
 File: Chapters/items/accuracy.png Graphic file (type png)
 <use Chapters/items/accuracy.png>
 Package pdftex.def Info: Chapters/items/accuracy.png  used on input line 176.
 (pdftex.def)             Requested size: 441.01773pt x 342.39182pt.
+<Chapters/items/validate.png, id=189, 632.6034pt x 474.0912pt>
+File: Chapters/items/validate.png Graphic file (type png)
+<use Chapters/items/validate.png>
+Package pdftex.def Info: Chapters/items/validate.png  used on input line 190.
+(pdftex.def)             Requested size: 441.01773pt x 330.5088pt.
+ [20 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/accuracy.png (PNG copy)>] [21 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/validate.png (PNG copy)>]
+<Chapters/items/dataset.png, id=201, 512.91624pt x 310.15875pt>
+File: Chapters/items/dataset.png Graphic file (type png)
+<use Chapters/items/dataset.png>
+Package pdftex.def Info: Chapters/items/dataset.png  used on input line 207.
+(pdftex.def)             Requested size: 264.61333pt x 160.01039pt.
+) [22 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/dataset.png>]
+\openout2 = `Chapters/content/chap4.aux'.
 
-/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/content/chap3.tex:179: Undefined control sequence.
-\sl@RemoveGobble ...l@Terminator ->\def \sl@Tempb 
-                                                  {#2}\ifx \sl@Tempb \@empty...
-l.179 ...�n tập d�c trên tập dữ liệu LFW}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'),
+ (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/content/chap4.tex
+Chương 4.
+
+LaTeX Font Warning: Font shape `T5/cmr/bx/scit' undefined
+(Font)              using `T5/cmr/bx/it' instead on input line 2.
+
+[23
+
+
+
+]) [24] (/home/thai/Data2/image-compression-with-autoencoders/report/book_ML.bbl
+
+Package natbib Warning: Empty `thebibliography' environment on input line 3.
+
+) [25
+
+
+
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
+ (/home/thai/Data2/image-compression-with-autoencoders/report/book_ML.aux (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/content/chap1.aux) (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/content/chap2.aux) (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/content/chap3.aux) (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/content/chap4.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 68.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 31765 strings out of 481239
+ 573802 string characters out of 5920377
+ 877728 words of memory out of 5000000
+ 46317 multiletter control sequences out of 15000+600000
+ 560776 words of font info for 86 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 64i,17n,100p,1072b,738s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnti9.pfb>
+Output written on /home/thai/Data2/image-compression-with-autoencoders/report/book_ML.pdf (25 pages, 2602608 bytes).
+PDF statistics:
+ 363 PDF objects out of 1000 (max. 8388607)
+ 292 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 228 words of extra memory for PDF output out of 10000 (max. 10000000)
+

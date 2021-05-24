@@ -1,0 +1,34 @@
+\contentsline {chapter}{MỞ ĐẦU}{4}{chapter*.2}%
+\contentsline {section}{\numberline {0.1}Lý do chọn đề tài}{4}{section.0.1}%
+\contentsline {section}{\numberline {0.2}Mục đích của đề tài}{4}{section.0.2}%
+\contentsline {section}{\numberline {0.3}Đối tượng và phạm vi nghiên cứu của đề tài}{4}{section.0.3}%
+\contentsline {subsection}{\numberline {0.3.1}Đối tượng}{4}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {0.3.2}Phạm vi nghiên cứu}{6}{subsection.0.3.2}%
+\contentsline {section}{\numberline {0.4}Bảng các ký hiệu}{7}{section.0.4}%
+\contentsline {chapter}{\numberline {1}Nghiên cứu tổng quan}{8}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Các phương pháp nghiên cứu}{8}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Ưu nhược điểm của các phương pháp}{8}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Nén không mất mát thông tin: }{8}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Nén có mất mát dữ liệu:}{9}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Kết luận}{10}{subsection.1.2.3}%
+\contentsline {chapter}{\numberline {2}Cơ sở lý thuyết}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Tổng quan về các kĩ thuật nén mất mát thông tin}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Các kĩ thuật nén codec thường được sử dụng}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Bộ mã hóa tự động (Autoencoder)}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Bộ mã hóa tự động chưa hoàn chỉnh}{13}{subsection.2.3.1}%
+\contentsline {chapter}{\numberline {3}Triển khai chương trình và đánh giá hiệu suất}{14}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Phân tích}{14}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Xây dựng}{15}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Thu thập dữ liệu khuôn mặt}{15}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Phát hiện khuôn mặt và gán nhãn dữ liệu}{16}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Làm giàu dữ liệu}{16}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Trích chọn các đặc trưng ảnh khuôn mặt}{17}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Đưa các vector đặc trưng vào mô hình phân loại}{18}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Nhận diện khuôn mặt và tiến hành điểm danh}{19}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Kết quả thử nghiệm}{20}{subsection.3.2.7}%
+\contentsline {subsubsection}{Độ chính xác của mô hình facenet}{20}{subsection.3.2.7}%
+\contentsline {subsubsection}{Hiệu suất của hệ thống}{22}{figure.caption.13}%
+\contentsline {chapter}{\numberline {4}Kết luận và hướng phát triển}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Kết luận}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Hướng phát triển}{23}{section.4.2}%
+\contentsline {chapter}{Tài liệu tham khảo}{25}{chapter*.15}%
