@@ -1,10 +1,26 @@
 \begin{thebibliography}{1}
 
+\bibitem{Adagrad}
+J.~Duchi, E.~Hazan, and Y.~Singer.
+\newblock Adaptive subgradient methods for online learning and stochastic
+  optimization.
+\newblock {\em Journal of Machine Learning Research}, 12(61):2121--2159, 2011.
+
 \bibitem{repec}
 R.~J.Hassan and A.~M. Abdulazeez.
 \newblock {Deep Learning Convolutional Neural Network for Face Recognition: A
   Review}.
 \newblock {\em International Journal of Science and Business}, 5(2):114--127,
   2021.
+
+\bibitem{svd}
+D.~P. {Kingma} and J.~{Ba}.
+\newblock {Adam: A Method for Stochastic Optimization}.
+\newblock {\em arXiv e-prints}, page arXiv:1412.6980, Dec. 2014.
+
+\bibitem{Adadelta}
+M.~D. {Zeiler}.
+\newblock {ADADELTA: An Adaptive Learning Rate Method}.
+\newblock {\em arXiv e-prints}, page arXiv:1212.5701, Dec. 2012.
 
 \end{thebibliography}

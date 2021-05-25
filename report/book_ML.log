@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.19)  25 MAY 2021 00:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.19)  25 MAY 2021 09:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1297,83 +1297,82 @@ File: Chapters/items/DCT.jpg Graphic file (type jpg)
 <use Chapters/items/DCT.jpg>
 Package pdftex.def Info: Chapters/items/DCT.jpg  used on input line 89.
 (pdftex.def)             Requested size: 352.81552pt x 190.68321pt.
- [11] [12 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/DCT.jpg>]
-<Chapters/items/ann.jpg, id=141, 585.18625pt x 445.665pt>
+ [11] [12 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/DCT.jpg>] [13]
+<Chapters/items/ann.jpg, id=147, 585.18625pt x 445.665pt>
 File: Chapters/items/ann.jpg Graphic file (type jpg)
 <use Chapters/items/ann.jpg>
-Package pdftex.def Info: Chapters/items/ann.jpg  used on input line 153.
-(pdftex.def)             Requested size: 264.61333pt x 201.53343pt.
- [13]
-<Chapters/items/cnn2_1.jpg, id=149, 384.345pt x 205.9695pt>
+Package pdftex.def Info: Chapters/items/ann.jpg  used on input line 154.
+(pdftex.def)             Requested size: 220.50887pt x 167.9332pt.
+ [14 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/ann.jpg>]
+<Chapters/items/cnn2_1.jpg, id=154, 384.345pt x 205.9695pt>
 File: Chapters/items/cnn2_1.jpg Graphic file (type jpg)
 <use Chapters/items/cnn2_1.jpg>
-Package pdftex.def Info: Chapters/items/cnn2_1.jpg  used on input line 190.
+Package pdftex.def Info: Chapters/items/cnn2_1.jpg  used on input line 191.
 (pdftex.def)             Requested size: 441.01773pt x 236.33821pt.
- [14 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/ann.jpg>] [15 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/cnn2_1.jpg>]
-<Chapters/items/chap2_3.jpg, id=163, 545.03625pt x 532.23843pt>
+ [15 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/cnn2_1.jpg>]
+<Chapters/items/chap2_3.jpg, id=162, 545.03625pt x 532.23843pt>
 File: Chapters/items/chap2_3.jpg Graphic file (type jpg)
 <use Chapters/items/chap2_3.jpg>
-Package pdftex.def Info: Chapters/items/chap2_3.jpg  used on input line 224.
+Package pdftex.def Info: Chapters/items/chap2_3.jpg  used on input line 225.
 (pdftex.def)             Requested size: 158.7696pt x 155.03549pt.
-<Chapters/items/chap2_4.jpg, id=164, 845.40843pt x 618.05907pt>
+<Chapters/items/chap2_4.jpg, id=163, 845.40843pt x 618.05907pt>
 File: Chapters/items/chap2_4.jpg Graphic file (type jpg)
 <use Chapters/items/chap2_4.jpg>
-Package pdftex.def Info: Chapters/items/chap2_4.jpg  used on input line 239.
+Package pdftex.def Info: Chapters/items/chap2_4.jpg  used on input line 240.
 (pdftex.def)             Requested size: 441.01773pt x 322.41109pt.
-<Chapters/items/chap2_5.jpg, id=165, 603.25375pt x 291.0875pt>
+ [16 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap2_3.jpg>]
+<Chapters/items/chap2_5.jpg, id=171, 603.25375pt x 291.0875pt>
 File: Chapters/items/chap2_5.jpg Graphic file (type jpg)
 <use Chapters/items/chap2_5.jpg>
-Package pdftex.def Info: Chapters/items/chap2_5.jpg  used on input line 255.
+Package pdftex.def Info: Chapters/items/chap2_5.jpg  used on input line 256.
 (pdftex.def)             Requested size: 441.01773pt x 212.80301pt.
- [16 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap2_3.jpg>] [17 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap2_4.jpg> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap2_5.jpg>]
-<Chapters/items/chap2_6.jpg, id=180, 1196.47pt x 512.91624pt>
+ [17 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap2_4.jpg>] [18 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap2_5.jpg>]
+<Chapters/items/chap2_6.jpg, id=185, 1196.47pt x 512.91624pt>
 File: Chapters/items/chap2_6.jpg Graphic file (type jpg)
 <use Chapters/items/chap2_6.jpg>
-Package pdftex.def Info: Chapters/items/chap2_6.jpg  used on input line 290.
+Package pdftex.def Info: Chapters/items/chap2_6.jpg  used on input line 291.
 (pdftex.def)             Requested size: 441.01773pt x 189.06383pt.
- [18]
-<Chapters/items/chap2_7.jpg, id=186, 789.95125pt x 369.38pt>
+ [19 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap2_6.jpg (PNG copy)>]
+<Chapters/items/chap2_7.jpg, id=192, 789.95125pt x 369.38pt>
 File: Chapters/items/chap2_7.jpg Graphic file (type jpg)
 <use Chapters/items/chap2_7.jpg>
-Package pdftex.def Info: Chapters/items/chap2_7.jpg  used on input line 308.
+Package pdftex.def Info: Chapters/items/chap2_7.jpg  used on input line 309.
 (pdftex.def)             Requested size: 441.01773pt x 206.22012pt.
- [19 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap2_6.jpg (PNG copy)> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap2_7.jpg>]
-<Chapters/items/chap2_8.jpg, id=195, 853.1875pt x 378.41376pt>
+<Chapters/items/chap2_8.jpg, id=193, 853.1875pt x 378.41376pt>
 File: Chapters/items/chap2_8.jpg Graphic file (type jpg)
 <use Chapters/items/chap2_8.jpg>
-Package pdftex.def Info: Chapters/items/chap2_8.jpg  used on input line 334.
+Package pdftex.def Info: Chapters/items/chap2_8.jpg  used on input line 335.
 (pdftex.def)             Requested size: 441.01773pt x 195.60991pt.
- [20 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap2_8.jpg>]
-<Chapters/items/autoencoder1.png, id=202, 871.255pt x 603.25375pt>
+ [20 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap2_7.jpg>]
+<Chapters/items/autoencoder1.png, id=201, 871.255pt x 603.25375pt>
 File: Chapters/items/autoencoder1.png Graphic file (type png)
 <use Chapters/items/autoencoder1.png>
-Package pdftex.def Info: Chapters/items/autoencoder1.png  used on input line 358.
+Package pdftex.def Info: Chapters/items/autoencoder1.png  used on input line 359.
 (pdftex.def)             Requested size: 352.81552pt x 244.28882pt.
- [21 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/autoencoder1.png>]
-<Chapters/items/auto2.jpg, id=210, 780.9175pt x 528.97626pt>
+ [21 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/chap2_8.jpg>]
+<Chapters/items/auto2.jpg, id=208, 780.9175pt x 528.97626pt>
 File: Chapters/items/auto2.jpg Graphic file (type jpg)
 <use Chapters/items/auto2.jpg>
-Package pdftex.def Info: Chapters/items/auto2.jpg  used on input line 413.
+Package pdftex.def Info: Chapters/items/auto2.jpg  used on input line 414.
 (pdftex.def)             Requested size: 352.81552pt x 238.98955pt.
- [22]
-<Chapters/items/auto3.jpg, id=217, 600.2425pt x 515.9275pt>
+ [22 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/autoencoder1.png>] [23 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/auto2.jpg>]
+<Chapters/items/auto3.jpg, id=223, 600.2425pt x 515.9275pt>
 File: Chapters/items/auto3.jpg Graphic file (type jpg)
 <use Chapters/items/auto3.jpg>
-Package pdftex.def Info: Chapters/items/auto3.jpg  used on input line 433.
+Package pdftex.def Info: Chapters/items/auto3.jpg  used on input line 434.
 (pdftex.def)             Requested size: 220.50887pt x 189.53613pt.
- [23 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/auto2.jpg> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/auto3.jpg>]
-<Chapters/items/auto4.jpg, id=226, 827.09pt x 586.19pt>
+<Chapters/items/auto4.jpg, id=224, 827.09pt x 586.19pt>
 File: Chapters/items/auto4.jpg Graphic file (type jpg)
 <use Chapters/items/auto4.jpg>
-Package pdftex.def Info: Chapters/items/auto4.jpg  used on input line 465.
+Package pdftex.def Info: Chapters/items/auto4.jpg  used on input line 466.
 (pdftex.def)             Requested size: 352.81552pt x 250.0532pt.
- [24 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/auto4.jpg>] [25]
-<Chapters/items/auto5.jpg, id=243, 1206.5075pt x 551.05875pt>
+ [24 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/auto3.jpg>] [25 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/auto4.jpg>] [26]
+<Chapters/items/auto5.jpg, id=247, 1206.5075pt x 551.05875pt>
 File: Chapters/items/auto5.jpg Graphic file (type jpg)
 <use Chapters/items/auto5.jpg>
-Package pdftex.def Info: Chapters/items/auto5.jpg  used on input line 531.
+Package pdftex.def Info: Chapters/items/auto5.jpg  used on input line 532.
 (pdftex.def)             Requested size: 352.81552pt x 161.13988pt.
- [26 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/auto5.jpg>]) [27]
+ [27 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/auto5.jpg>]) [28]
 \openout2 = `Chapters/content/chap3.aux'.
 
  (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/content/chap3.tex
@@ -1382,43 +1381,81 @@ Chương 3.
 LaTeX Font Warning: Font shape `T5/cmr/bx/scit' undefined
 (Font)              using `T5/cmr/bx/it' instead on input line 2.
 
-<Chapters/items/networks.jpg, id=256, 853.1875pt x 312.16624pt>
+<Chapters/items/networks.jpg, id=260, 853.1875pt x 312.16624pt>
 File: Chapters/items/networks.jpg Graphic file (type jpg)
 <use Chapters/items/networks.jpg>
 Package pdftex.def Info: Chapters/items/networks.jpg  used on input line 35.
 (pdftex.def)             Requested size: 352.81552pt x 129.0893pt.
-[28
+[29
 
 
 
-] [29 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/networks.jpg>] [30]
-<Chapters/items/data.jpg, id=275, 498.86375pt x 433.62pt>
+] [30 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/networks.jpg>]
+<Chapters/items/data.jpg, id=279, 498.86375pt x 433.62pt>
 File: Chapters/items/data.jpg Graphic file (type jpg)
 <use Chapters/items/data.jpg>
 Package pdftex.def Info: Chapters/items/data.jpg  used on input line 91.
 (pdftex.def)             Requested size: 264.61333pt x 230.00938pt.
-<Chapters/items/pram.jpg, id=276, 507.8975pt x 285.065pt>
+ [31] [32 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/data.jpg>]
+<Chapters/items/pram.jpg, id=292, 507.8975pt x 285.065pt>
 File: Chapters/items/pram.jpg Graphic file (type jpg)
 <use Chapters/items/pram.jpg>
-Package pdftex.def Info: Chapters/items/pram.jpg  used on input line 112.
+Package pdftex.def Info: Chapters/items/pram.jpg  used on input line 113.
 (pdftex.def)             Requested size: 308.71106pt x 173.27173pt.
-<Chapters/items/colab1.jpg, id=277, 865.2325pt x 296.10625pt>
+<Chapters/items/model.png, id=293, 690.58pt x 201.75375pt>
+File: Chapters/items/model.png Graphic file (type png)
+<use Chapters/items/model.png>
+Package pdftex.def Info: Chapters/items/model.png  used on input line 124.
+(pdftex.def)             Requested size: 441.01773pt x 128.84488pt.
+<Chapters/items/colab1.jpg, id=294, 865.2325pt x 296.10625pt>
 File: Chapters/items/colab1.jpg Graphic file (type jpg)
 <use Chapters/items/colab1.jpg>
-Package pdftex.def Info: Chapters/items/colab1.jpg  used on input line 128.
+Package pdftex.def Info: Chapters/items/colab1.jpg  used on input line 142.
 (pdftex.def)             Requested size: 352.81552pt x 120.74467pt.
- [31 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/data.jpg>] [32 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/pram.jpg> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/colab1.jpg>]
-<Chapters/items/colab2.jpg, id=290, 811.03pt x 104.39pt>
+ [33 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/pram.jpg> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/model.png>]
+<Chapters/items/colab2.jpg, id=302, 811.03pt x 104.39pt>
 File: Chapters/items/colab2.jpg Graphic file (type jpg)
 <use Chapters/items/colab2.jpg>
-Package pdftex.def Info: Chapters/items/colab2.jpg  used on input line 143.
+Package pdftex.def Info: Chapters/items/colab2.jpg  used on input line 157.
 (pdftex.def)             Requested size: 352.81552pt x 45.41246pt.
-<Chapters/items/visualizeTraining.jpg, id=291, 941.5175pt x 408.52625pt>
+<Chapters/items/visualizeTraining.jpg, id=303, 941.5175pt x 408.52625pt>
 File: Chapters/items/visualizeTraining.jpg Graphic file (type jpg)
 <use Chapters/items/visualizeTraining.jpg>
-Package pdftex.def Info: Chapters/items/visualizeTraining.jpg  used on input line 155.
+Package pdftex.def Info: Chapters/items/visualizeTraining.jpg  used on input line 169.
 (pdftex.def)             Requested size: 352.81552pt x 153.08476pt.
-) [33 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/colab2.jpg> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/visualizeTraining.jpg>]
+ [34 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/colab1.jpg> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/colab2.jpg> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/visualizeTraining.jpg>]
+<Chapters/items/encode.jpg, id=313, 679.53876pt x 488.82625pt>
+File: Chapters/items/encode.jpg Graphic file (type jpg)
+<use Chapters/items/encode.jpg>
+Package pdftex.def Info: Chapters/items/encode.jpg  used on input line 195.
+(pdftex.def)             Requested size: 352.81552pt x 253.79578pt.
+<Chapters/items/decode.jpg, id=314, 732.7375pt x 611.28375pt>
+File: Chapters/items/decode.jpg Graphic file (type jpg)
+<use Chapters/items/decode.jpg>
+Package pdftex.def Info: Chapters/items/decode.jpg  used on input line 218.
+(pdftex.def)             Requested size: 352.81552pt x 294.33627pt.
+ [35 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/encode.jpg>] [36 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/decode.jpg>]
+<Chapters/items/1_10.png, id=327, 2569.6pt x 770.88pt>
+File: Chapters/items/1_10.png Graphic file (type png)
+<use Chapters/items/1_10.png>
+Package pdftex.def Info: Chapters/items/1_10.png  used on input line 232.
+(pdftex.def)             Requested size: 441.01773pt x 132.29471pt.
+<Chapters/items/3_30.png, id=328, 2569.6pt x 770.88pt>
+File: Chapters/items/3_30.png Graphic file (type png)
+<use Chapters/items/3_30.png>
+Package pdftex.def Info: Chapters/items/3_30.png  used on input line 240.
+(pdftex.def)             Requested size: 441.01773pt x 132.29471pt.
+<Chapters/items/3_100.png, id=329, 2569.6pt x 770.88pt>
+File: Chapters/items/3_100.png Graphic file (type png)
+<use Chapters/items/3_100.png>
+Package pdftex.def Info: Chapters/items/3_100.png  used on input line 248.
+(pdftex.def)             Requested size: 441.01773pt x 132.29471pt.
+<Chapters/items/3_140.png, id=330, 2569.6pt x 770.88pt>
+File: Chapters/items/3_140.png Graphic file (type png)
+<use Chapters/items/3_140.png>
+Package pdftex.def Info: Chapters/items/3_140.png  used on input line 256.
+(pdftex.def)             Requested size: 441.01773pt x 132.29471pt.
+) [37 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/1_10.png (PNG copy)> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/3_30.png (PNG copy)> </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/3_100.png (PNG copy)>] [38 </home/thai/Data2/image-compression-with-autoencoders/report/Chapters/items/3_140.png (PNG copy)>]
 \openout2 = `Chapters/content/chap4.aux'.
 
  (/home/thai/Data2/image-compression-with-autoencoders/report/Chapters/content/chap4.tex
@@ -1427,11 +1464,11 @@ Chương 4.
 LaTeX Font Warning: Font shape `T5/cmr/bx/scit' undefined
 (Font)              using `T5/cmr/bx/it' instead on input line 2.
 
-[34
+) [39
 
 
 
-]) [35] (/home/thai/Data2/image-compression-with-autoencoders/report/book_ML.bbl) [36
+] [40] (/home/thai/Data2/image-compression-with-autoencoders/report/book_ML.bbl) [41
 
 
 
@@ -1448,18 +1485,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 31887 strings out of 481239
- 576087 string characters out of 5920377
- 877791 words of memory out of 5000000
- 46391 multiletter control sequences out of 15000+600000
- 562569 words of font info for 88 fonts, out of 8000000 for 9000
+ 31963 strings out of 481239
+ 577620 string characters out of 5920377
+ 880250 words of memory out of 5000000
+ 46446 multiletter control sequences out of 15000+600000
+ 560682 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,17n,100p,1072b,870s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnti9.pfb>
-Output written on /home/thai/Data2/image-compression-with-autoencoders/report/book_ML.pdf (36 pages, 1584798 bytes).
+Output written on /home/thai/Data2/image-compression-with-autoencoders/report/book_ML.pdf (41 pages, 9474750 bytes).
 PDF statistics:
- 491 PDF objects out of 1000 (max. 8388607)
- 392 compressed objects within 4 object streams
- 109 named destinations out of 1000 (max. 500000)
- 297 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 539 PDF objects out of 1000 (max. 8388607)
+ 425 compressed objects within 5 object streams
+ 124 named destinations out of 1000 (max. 500000)
+ 332 words of extra memory for PDF output out of 10000 (max. 10000000)
 

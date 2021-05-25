@@ -1,38 +1,28 @@
 %!TEX root = ../../book_ML.tex
-\chapter{Kết luận và kiến nghị}
+\chapter{Kết luận và hướng phát triển}
 \label{cha:chap4}
 
 \section{Kết luận}
-Trên cơ sở tìm hiểu về bài toán nhận diện mặt người trong ảnh, sử dụng pre-trained
-model FaceNet được huấn luyện trước trên mạng cơ sở là InceptionResnetV1 do
-tiến sĩ khoa học máy tính David Sandberg cung cấp, tôi đã xây dựng thành công hệ
-thống điểm danh thông qua hình ảnh khuôn mặt.
 
-Về khả năng phát hiện khuôn mặt, kết quả phát hiện khá tốt hầu hết các trường hợp,
-kể cả trong điều kiện thiếu sáng, góc nghiêng, hay có vật che khuất như kính mắt,…
+Như vậy, với một mạng nơ-ron không quá phức tạp khoảng 2 triệu tham số cùng 50 lớp, chúng em đã hoàn thành huấn luyện
+một công cụ nén ảnh trên một máy tính phần cứng bình thường và GPU tốt do Google cung cấp miễn phí. Từ kết quả cho thấy
+hiệu năng nén được coi là chấp nhận được.
 
-Về khả năng nhận dạng, hệ thống đạt kết quả từ 96-98\% đối với các khuôn mặt thẳng
-và điều kiện ánh sáng thích hợp, đạt 92-95\% đối với các khuôn mặt nghiêng hoặc
-thiếu sáng.
+Nhưng vẫn còn một số phần ảnh chưa được hoàn chỉnh, do ghép nối các khối lại với nhau không có sự liên kết. Để khắc phục tình trạng này
+chúng em đề xuất sử dụng một số phương pháp nội suy để làm mờ các đường nối này.
 
-Về khả năng loại trừ các khuôn mặt “unknown face”, kết quả đạt khoảng 85-90\% khuôn mặt lạ
-được phát hiện trong quá trình thử nghiệm.
-Hệ thống điểm danh hoạt động ổn định và mượt mà nhờ máy chủ viết bằng Python.
-Giao diện được xây dựng trên nền Web là một lợi thế vì tính đơn giản và tiện lợi.
+\section{Hướng phát triển}
 
-\section{Kiến nghị}
-
-Dựa trên những cơ sở sẵn có này thệ thống có thể được cải tiến trong
+Dựa trên những cơ sở sẵn có này công cụ có thể được cải tiến trong
 tương lai bằng những phương pháp sau:
 \begin{itemize}
-    \item Cải thiện thời gian chạy của hệ thống, nâng cấp lên có thể chạy trong thời gian thực
-    \item Để cải thiện độ chính xác cho hệ thống, đầu tiên ta cần cải thiện bộ dữ liệu dựa trên các tiêu chí như tư thế chụp, góc chụp, hạn chế sự che khuất các bộ phận trên mặt, biểu cảm khuôn mặt, điều kiện ánh sáng, tuổi tác…
+    \item Cải thiện thời gian chạy, huấn luyện của mô hình, nâng cấp lên có thể chạy trong thời gian ít hơn nếu có phần cứng tốt hơn
+    \item Để cải thiện độ chính xác cho phần giải mã, sử dụng các phương pháp nội suy.
     \item Thử nghiệm với nhiều mô hình được huấn luyện trước và thuật toán huấn luyện khác nhau cho bộ dữ liệu của hệ thống.
-    \item Thay thế phương pháp loại bỏ khuôn mặt lạ, thử nghiệm và chọn ra ngưỡng cho phép phù hợp hơn.
+    \item Thêm nhiều lớp mạng, để mạng nơ-ron lớn hơn, thông mình hơn.
 \end{itemize}
 
-Không chỉ dừng lại ở việc điểm danh, của hệ thống nhận dạng khuôn mặt có thể được sử dụng trong các 
-hệ thống mở khóa, thanh toán, hay truy tìm tội phạm,…
+Không chỉ dừng lại ở việc nén dữ liệu ảnh, mà còn trên nhiều loại dữ liệu khác,…
 
 
 
