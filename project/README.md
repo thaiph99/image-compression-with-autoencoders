@@ -55,7 +55,7 @@ num_workers: 1
 device: cuda
 ```
 
-**Note**: Currently, smoothing (i.e. linear interpolation in [`smoothing.py`](https://github.com/alexandru-dinu/cae/blob/master/src/smoothing.py#L19)) is used in order to account for the between-patches noisy areas due to padding (this still needs [further investigation](https://github.com/alexandru-dinu/cae/issues/20)).
+**Note**: Currently, smoothing (i.e. linear interpolation in [`smoothing.py`]) is used in order to account for the between-patches noisy areas due to padding (this still needs [further investigation]
 
 ## Results
 
